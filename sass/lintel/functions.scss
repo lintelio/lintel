@@ -1,0 +1,18 @@
+// Colors
+// ------
+@function convertColorToBg($color, $lighten: 40%, $desaturate: 20%) {
+  @return desaturate(lighten($color, $ligthen), $desaturate);
+}
+
+
+// Units
+// -----
+@function stripUnit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function em($value, $inherited-font-size: $font-size-base) {
+  $value: stripUnit($value);
+  $inherited-font-size: stripUnit($inherited-font-size);
+  @return $value / $inherited-font-size * 1em;
+}

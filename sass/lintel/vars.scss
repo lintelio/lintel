@@ -1,0 +1,170 @@
+// Colors
+// ------
+$state-primary:         #0084ca !default;
+$state-secondary:       #0084ca !default;
+$state-danger:          #C0392B !default;
+$state-warning:         #F1C40F !default;
+$state-success:         #0F9E4B !default;
+$state-info:            #5bc0de !default;
+
+$state-primary-bg:      convertColorToBg($state-primary) !default;
+$state-primary-text:    $state-primary !default;
+$state-primary-border:  $state-primary !default;
+
+$state-secondary-bg:    convertColorToBg($state-secondary) !default;
+$state-secondary-text:  $state-secondary !default;
+$state-secondary-border:$state-secondary !default;
+
+$state-danger-bg:       convertColorToBg($state-danger) !default;
+$state-danger-text:     $state-danger !default;
+$state-danger-border:   $state-danger !default;
+
+$state-warning-bg:      convertColorToBg($state-warning) !default;
+$state-warning-text:    $state-warning !default;
+$state-warning-border:  $state-warning !default;
+
+$state-success-bg:      convertColorToBg($state-success) !default;
+$state-success-text:    $state-success !default;
+$state-success-border:  $state-success !default;
+
+$state-info-bg:         convertColorToBg($state-info) !default;
+$state-info-text:       $state-info !default;
+$state-info-border:     $state-info !default;
+
+// Grays
+$gray-darkest:          lighten(#000, 10%) !default;
+$gray-darker:           lighten(#000, 13.5%) !default;
+$gray-dark:             lighten(#000, 20%) !default;
+$gray-base:             lighten(#000, 33.5%) !default;
+$gray-light:            lighten(#000, 52.5%) !default;
+$gray-lighter:          lighten(#000, 93.5%) !default;
+$gray-lightest:         lighten(#000, 97.5%) !default;
+
+// Borders
+$border:                #ececec !default;
+$border-lightest:       lighten($border, 5%) !default;
+$border-lighter:        lighten($border, 2.5%) !default;
+$border-light:          lighten($border, 1.5%) !default;
+$border-dark:           darken($border, 5%) !default;
+$border-darker:         darken($border, 7.5%) !default;
+$border-darkest:        darken($border, 12.5%) !default;
+
+$border-radius-lg:      6px !default;
+$border-radius-md:      4px !default;
+$border-radius-sm:      2px !default;
+
+// Backgrounds
+$bg-base:               #f6f6f6 !default;
+$bg-light:              #fbfbfb !default;
+
+// Text
+$text-link:             $state-primary-text !default;
+$text-link-hover:       $state-primary-text !default;
+
+$text-base:             $gray-darkest !default;
+$text-light:            $gray-dark !default;
+
+$text-muted:            $text-light !default;
+
+
+// Shadows
+// -------
+$box-shadow-light:      0 1px 3px rgba(0, 0, 0, 0.05) !default;
+$box-shadow-base:       0 1px 3px rgba(0, 0, 0, 0.1) !default;
+$box-shadow-dark:       0 1px 3px rgba(0, 0, 0, 0.15) !default;
+
+
+// TYPOGRAPHY
+// ----------
+$font-size-base:            14px !default;
+
+$font-size-lg:              ceil($font-size-base * 1.25) !default;
+$font-size-md:              ceil($font-size-base * 8 / 7) !default;
+
+$font-size-h1:              36px !default;
+$font-size-h2:              30px !default;
+$font-size-h3:              24px !default;
+$font-size-h4:              18px !default;
+$font-size-h5:              14px !default;
+$font-size-h6:              12px !default;
+
+// Font Families
+$font-family-sans-serif:    "Helvetica Neue", Helvetica, sans-serif !default;
+$font-family-serif:         Georgia, serif !default;
+$font-family-monospace:     Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-headings:      $font-family-sans-serif !default;
+
+// Line Height
+$line-height-computed:      20px !default;
+$line-height-base:          strip-unit($line-height-computed / $font-size-base) !default;
+$line-height-headings:      1.4;
+
+// Font Weights
+$font-weight-headings:      300 !default;
+
+
+// Spacing
+// -------
+$cushion-base:          20px !default;
+
+$cushion-y-xl:          16px !default;
+$cushion-x-xl:          20px !default;
+
+$cushion-y-lg:          12px !default;
+$cushion-x-lg:          16px !default;
+
+$cushion-y-md:          6px !default;  // base
+$cushion-x-md:          12px !default; // base
+
+$cushion-y-sm:          5px !default;
+$cushion-x-sm:          10px !default;
+
+$cushion-y-xs:          1px !default;
+$cushion-x-xs:          5px !default;
+
+
+// Sizes
+// -----
+// Thumbnails
+$thumb-3xs:             32px;
+$thumb-2xs:             40px;
+$thumb-xs:              60px;
+$thumb-sm:              100px;
+$thumb-md:              130px;
+$thumb-lg:              200px;
+$thumb-xl:              250px;
+$thumb-2xl:             300px;
+
+
+// Breakpoints 
+// -----------
+$screen-max-min:        1920px !default;
+
+$screen-2xl-min:        1680px !default;
+$screen-2xl-max:        ($screen-max-min - 1) !default;
+
+$screen-xl-min:         1368px !default;
+$screen-xl-max:         ($screen-2xl-min - 1) !default;
+
+$screen-lg-min:         1200px !default;
+$screen-lg-max:         ($screen-xl-min - 1) !default;
+
+$screen-md-min:         992px !default;
+$screen-md-max:         ($screen-lg-min - 1) !default;
+
+$screen-sm-min:         768px !default;
+$screen-sm-max:         ($screen-md-min - 1) !default;
+
+$screen-xs-min:         480px !default;
+$screen-xs-max:         ($screen-sm-min - 1) !default;
+
+
+// Durations
+// ---------
+$animate-fastest:       0.1s !default;
+$animate-faster:        0.2s !default;
+$animate-fast:          0.4s !default;
+$animate-base:          0.5s !default;
+$animate-slow:          0.6s !default;
+$animate-slower:        0.8s !default;
+$animate-slowest:       1s !default;
