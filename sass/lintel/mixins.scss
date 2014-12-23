@@ -1,0 +1,82 @@
+// Cushion
+// -------
+@mixin cushion($name, $property, $modifier: "", $x: 0, $y: 0) {
+  @if $modifier != "" {
+    $modifier: "-" + $modifier;
+  }
+  @if $y == 0 {
+    $y: $x;
+  }
+  .#{$name}#{$modifier}        { #{$property}: $y $x; }
+  .#{$name}-y#{$modifier}      { #{$property}-top: $y; #{$property}-bottom: $y; }
+  .#{$name}-x#{$modifier}      { #{$property}-left: $x; #{$property}-right: $x; }
+  .#{$name}-top#{$modifier}    { #{$property}-top: $y; }
+  .#{$name}-right#{$modifier}  { #{$property}-right: $x; }
+  .#{$name}-bottom#{$modifier} { #{$property}-bottom: $y; }
+  .#{$name}-left#{$modifier}   { #{$property}-left: $x; }
+}
+
+
+// Borders
+// -------
+@mixin border($color, $modifier: "", $style: solid, $width: 1px) {
+  @if $modifier != "" {
+    $modifier: "-" + $modifier;
+  }
+  .border#{$modifier}        { border: $width $style $color; }
+  .border-y#{$modifier}      { border-top: $width $style $color; border-bottom: $width $style $color; }
+  .border-x#{$modifier}      { border-left: $width $style $color; border-right: $width $style $color; }
+  .border-top#{$modifier}    { border-top: $width $style $color; }
+  .border-right#{$modifier}  { border-right: $width $style $color; }
+  .border-bottom#{$modifier} { border-bottom: $width $style $color; }
+  .border-left#{$modifier}   { border-left: $width $style $color; }
+}
+
+
+// Visibility
+// ----------
+@mixin visible($name, $screen-min) {
+  .visible-#{$name}-block,
+  .visible-#{$name}-inline,
+  .visible-#{$name}-inline-block {
+    display: none;
+  }
+
+  @media screen and (min-width: $screen-min) {
+    .visible-#{$name}-block        { display: block; }
+    .visible-#{$name}-inline       { display: inline; }
+    .visible-#{$name}-inline-block { display: inline-block; }
+  }
+}
+
+@mixin hidden($name, $screen-min, $screen-max) {
+  @if $screen-min != 0 {
+    @media screen and (min-width: $screen-min) and (max-width: $screen-max) {
+      .hidden-#{$name} {
+        display: none;
+      }
+    }
+  }
+  @else {
+    @media screen and (max-width: $screen-max) {
+      .hidden-#{$name} {
+        display: none;
+      }
+    }
+  }
+}
+
+
+// Clearfix
+// --------
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}

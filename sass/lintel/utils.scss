@@ -1,0 +1,100 @@
+// Paddings
+// --------
+@include cushion("pad", "padding", "", $cushion-base);
+@include cushion("pad", "padding", "xl", $cushion-x-xl, $cushion-y-xl);
+@include cushion("pad", "padding", "lg", $cushion-x-lg, $cushion-y-lg);
+@include cushion("pad", "padding", "md", $cushion-x-md, $cushion-y-md);
+@include cushion("pad", "padding", "sm", $cushion-x-sm, $cushion-y-sm);
+@include cushion("pad", "padding", "xs", $cushion-x-xs, $cushion-y-xs);
+
+@include cushion("hard", "padding", "", 0);
+
+
+// Margins
+// -------
+@include cushion("push", "margin", "", $cushion-base);
+@include cushion("push", "margin", "xl", $cushion-x-xl, $cushion-y-xl);
+@include cushion("push", "margin", "lg", $cushion-x-lg, $cushion-y-lg);
+@include cushion("push", "margin", "md", $cushion-x-md, $cushion-y-md);
+@include cushion("push", "margin", "sm", $cushion-x-sm, $cushion-y-sm);
+@include cushion("push", "margin", "xs", $cushion-x-xs, $cushion-y-xs);
+
+@include cushion("flush", "margin", "", 0);
+
+
+// Borders
+// -------
+@include border($border-darkest, "darkest");
+@include border($border-darker, "darker");
+@include border($border-dark, "dark");
+@include border($border-base);
+@include border($border-light, "light");
+@include border($border-lighter, "lighter");
+@include border($border-lightest, "lightest");
+
+@include border($state-primary-border, "primary");
+@include border($state-secondary-border, "secondary");
+@include border($state-danger-border, "danger");
+@include border($state-warning-border, "warning");
+@include border($state-success-border, "success");
+@include border($state-info-border, "info");
+
+
+// Backgrounds
+// -----------
+.bg-base      { background-color: $bg-base; }
+.bg-light     { background-color: $bg-light; }
+
+.bg-primary   { background-color: $state-primary-bg; }
+.bg-secondary { background-color: $state-secondary-bg; }
+.bg-danger    { background-color: $state-danger-bg; }
+.bg-warning   { background-color: $state-warning-bg; }
+.bg-success   { background-color: $state-success-bg; }
+.bg-info      { background-color: $state-info-bg; }
+
+
+// Shadows
+// -----------
+.shadow-light { box-shadow: $box-shadow-light; }
+.shadow-base  { box-shadow: $box-shadow-base; }
+.shadow-dark  { box-shadow: $box-shadow-dark; }
+
+
+// Clearfix
+// --------
+.cf { @include clearfix; }
+
+
+// Visibility
+// ----------
+.invisible {
+  visibility: hidden;
+}
+
+// Visible
+.visible-block { display: block !important; }
+.visible-inline { display: inline !important; }
+.visible-inline-block { display: inline-block !important; }
+
+// Visible responsive
+@include visible(3xl, $screen-3xl-min);
+@include visible(2xl, $screen-2xl-min);
+@include visible(xl,  $screen-xl-min);
+@include visible(lg,  $screen-lg-min);
+@include visible(md,  $screen-md-min);
+@include visible(sm,  $screen-sm-min);
+
+// Hidden
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+// Hidden responsive
+@include hidden(3xl, $screen-3xl-min, $screen-3xl-max);
+@include hidden(2xl, $screen-2xl-min, $screen-2xl-max);
+@include hidden(xl,  $screen-xl-min,  $screen-xl-max);
+@include hidden(lg,  $screen-lg-min,  $screen-lg-max);
+@include hidden(md,  $screen-md-min,  $screen-md-max);
+@include hidden(sm,  $screen-sm-min,  $screen-sm-max);
+@include hidden(xs,  0,  $screen-xs-max);
