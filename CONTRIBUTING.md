@@ -77,7 +77,7 @@ See example below:
 
 #### Mixin guidelines:
 
-- Give mixins descriptive names. Make sure they are camelCased.
+- Give mixins descriptive names. Make sure they are dash-separated.
 
 - Provide useful defaults when it makes sense.
 

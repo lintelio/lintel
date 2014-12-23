@@ -1,7 +1,7 @@
 Lintel
 ======
 
-Lintel aims to be the next generation CSS framework for large-scale single page applications.
+Lintel aims to be the next generation CSS framework for scalable applications.
 
 
 Goals
