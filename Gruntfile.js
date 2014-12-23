@@ -73,6 +73,25 @@ module.exports = function (grunt) {
       dist: {
         src: ['dist/lintel.css']
       }
+    },
+
+    // Watch for changes
+    watch: {
+      sass: {
+        files: [
+          'sass/**/*.scss'
+        ],
+        tasks: ['test']
+      },
+      livereload: {
+        files: [
+          'dist/**/*.css',
+          'docs/**/*.html'
+        ],
+        options: {
+          livereload: true
+        }
+      },
     }
 
   });
@@ -82,6 +101,6 @@ module.exports = function (grunt) {
   grunt.registerTask('test', ['compile', 'csslint']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['test']);
+  grunt.registerTask('default', ['test', 'watch']);
 
 };
