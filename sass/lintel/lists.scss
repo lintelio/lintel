@@ -1,0 +1,118 @@
+// Lists
+// -----
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+// Sizes
+.list-y-xl > li {
+  padding-top: $cushion-y-xl;
+  padding-bottom: $cushion-y-xl;
+}
+
+.list-y-lg > li {
+  padding-top: $cushion-y-lg;
+  padding-bottom: $cushion-y-lg;
+}
+
+.list-y-md > li {
+  padding-top: $cushion-y-md;
+  padding-bottom: $cushion-y-md;
+}
+
+.list-y-sm > li {
+  padding-top: $cushion-y-sm;
+  padding-bottom: $cushion-y-sm;
+}
+
+.list-y-xs > li {
+  padding-top: $cushion-y-xs;
+  padding-bottom: $cushion-y-xs;
+}
+
+.list-y-flush > li {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.list-x-xl > li {
+  padding-left: $cushion-x-xl;
+  padding-right: $cushion-x-xl;
+}
+
+.list-x-lg > li {
+  padding-left: $cushion-x-lg;
+  padding-right: $cushion-x-lg;
+}
+
+.list-x-md > li {
+  padding-left: $cushion-x-md;
+  padding-right: $cushion-x-md;
+}
+
+.list-x-sm > li {
+  padding-left: $cushion-x-sm;
+  padding-right: $cushion-x-sm;
+}
+
+.list-x-xs > li {
+  padding-left: $cushion-x-xs;
+  padding-right: $cushion-x-xs;
+}
+
+.list-x-flush > li {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+// Stacked lists
+// -------------
+.list-stacked {
+  @extend .list;
+  border-bottom: 1px solid $border-base; // for last child
+
+  > li {
+    border-top: 1px solid $border-base;
+  }
+}
+
+
+// Striped lists
+// -------------
+.list-striped {
+  @extend .list;
+
+  > li {
+    padding-left: $cushion-x-md;
+    padding-right: $cushion-x-md;
+  }
+
+  > li:nth-child(even) {
+    background-color: $bg-base;
+  }
+}
+
+
+// Inline lists
+// ------------
+.list-inline {
+  @extend .list;
+
+  > li {
+    display: inline-block;
+  }
+}
+
+
+// Reset lists
+// -----------
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+// Definition lists
+// ----------------

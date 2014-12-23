@@ -107,6 +107,7 @@
 .float-right { float: right !important; }
 .float-none  { float: none !important; }
 
+// Float responsive
 @include float(3xl, $screen-3xl-min, $screen-3xl-max);
 @include float(2xl, $screen-2xl-min, $screen-2xl-max);
 @include float(xl,  $screen-xl-min, $screen-xl-max);
@@ -115,6 +116,14 @@
 @include float(sm,  $screen-sm-min, $screen-sm-max);
 @include float(xs,  0, $screen-xs-max);
 
+// Clear floats
 .clear-left  { clear: left !important; }
 .clear-right { clear: right !important; }
 .clear       { clear: both !important; }
+
+
+// Positioning
+// -----------
+.center-y { @include center($y: true, $x: false); }
+.center-x { @include center($y: false, $x: true); }
+.center { @extend .center-y; @extend .center-x; }

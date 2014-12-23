@@ -1,3 +1,73 @@
+.list, .list-stacked, .list-striped, .list-inline {
+  list-style: none;
+  padding-left: 0; }
+
+.list-y-xl > li {
+  padding-top: 6px;
+  padding-bottom: 6px; }
+
+.list-y-lg > li {
+  padding-top: 12px;
+  padding-bottom: 12px; }
+
+.list-y-md > li {
+  padding-top: 6px;
+  padding-bottom: 6px; }
+
+.list-y-sm > li {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.list-y-xs > li {
+  padding-top: 1px;
+  padding-bottom: 1px; }
+
+.list-y-flush > li {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.list-x-xl > li {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.list-x-lg > li {
+  padding-left: 16px;
+  padding-right: 16px; }
+
+.list-x-md > li {
+  padding-left: 12px;
+  padding-right: 12px; }
+
+.list-x-sm > li {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.list-x-xs > li {
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.list-x-flush > li {
+  padding-left: 0;
+  padding-right: 0; }
+
+.list-stacked {
+  border-bottom: 1px solid #ececec; }
+  .list-stacked > li {
+    border-top: 1px solid #ececec; }
+
+.list-striped > li {
+  padding-left: 12px;
+  padding-right: 12px; }
+.list-striped > li:nth-child(even) {
+  background-color: #f6f6f6; }
+
+.list-inline > li {
+  display: inline-block; }
+
+.list-reset {
+  list-style: none;
+  padding-left: 0; }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -1736,3 +1806,15 @@ body {
 
 .clear {
   clear: both !important; }
+
+.center-y, .center {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+.center-x, .center {
+  text-align: center; }
