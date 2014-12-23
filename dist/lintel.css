@@ -22,7 +22,7 @@
   padding-top: 1px;
   padding-bottom: 1px; }
 
-.list-y-flush > li {
+.list-y-hard > li {
   padding-top: 0;
   padding-bottom: 0; }
 
@@ -46,7 +46,7 @@
   padding-left: 5px;
   padding-right: 5px; }
 
-.list-x-flush > li {
+.list-x-hard > li {
   padding-left: 0;
   padding-right: 0; }
 
@@ -1174,6 +1174,24 @@ body {
 
 .visible-inline-block {
   display: inline-block !important; }
+
+.visible-sr {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.visible-sr-focusable:active, .visible-sr-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
 
 .visible-3xl-block, .visible-3xl-min-block, .visible-3xl-min-inline, .visible-3xl-min-inline-block, .visible-3xl-max-block, .visible-3xl-max-inline, .visible-3xl-max-inline-block, .visible-3xl-inline, .visible-3xl-inline-block {
   display: none !important; }
