@@ -77,12 +77,13 @@
 .visible-inline-block { display: inline-block !important; }
 
 // Visible responsive
-@include visible(3xl, $screen-3xl-min);
-@include visible(2xl, $screen-2xl-min);
-@include visible(xl,  $screen-xl-min);
-@include visible(lg,  $screen-lg-min);
-@include visible(md,  $screen-md-min);
-@include visible(sm,  $screen-sm-min);
+@include visible(3xl, $screen-3xl-min, $screen-3xl-max);
+@include visible(2xl, $screen-2xl-min, $screen-2xl-max);
+@include visible(xl,  $screen-xl-min, $screen-xl-max);
+@include visible(lg,  $screen-lg-min, $screen-lg-max);
+@include visible(md,  $screen-md-min, $screen-md-max);
+@include visible(sm,  $screen-sm-min, $screen-sm-max);
+@include visible(xs,  0, $screen-xs-max);
 
 // Hidden
 .hidden {
@@ -98,3 +99,22 @@
 @include hidden(md,  $screen-md-min,  $screen-md-max);
 @include hidden(sm,  $screen-sm-min,  $screen-sm-max);
 @include hidden(xs,  0,  $screen-xs-max);
+
+
+// Floats
+// ------
+.float-left  { float: left !important; }
+.float-right { float: right !important; }
+.float-none  { float: none !important; }
+
+@include float(3xl, $screen-3xl-min, $screen-3xl-max);
+@include float(2xl, $screen-2xl-min, $screen-2xl-max);
+@include float(xl,  $screen-xl-min, $screen-xl-max);
+@include float(lg,  $screen-lg-min, $screen-lg-max);
+@include float(md,  $screen-md-min, $screen-md-max);
+@include float(sm,  $screen-sm-min, $screen-sm-max);
+@include float(xs,  0, $screen-xs-max);
+
+.clear-left  { clear: left !important; }
+.clear-right { clear: right !important; }
+.clear       { clear: both !important; }

@@ -35,37 +35,108 @@
 
 // Visibility
 // ----------
-@mixin visible($name, $screen-min) {
+@mixin visible($name, $screen-min, $screen-max) {
   .visible-#{$name}-block,
   .visible-#{$name}-inline,
   .visible-#{$name}-inline-block {
-    display: none;
+    display: none !important;
   }
 
-  @media screen and (min-width: $screen-min) {
-    .visible-#{$name}-block        { display: block; }
-    .visible-#{$name}-inline       { display: inline; }
-    .visible-#{$name}-inline-block { display: inline-block; }
+  @if $screen-min > 0 {
+    .visible-#{$name}-min-block,
+    .visible-#{$name}-min-inline,
+    .visible-#{$name}-min-inline-block,
+    .visible-#{$name}-max-block,
+    .visible-#{$name}-max-inline,
+    .visible-#{$name}-max-inline-block {
+      @extend .visible-#{$name}-block,
+    }
+
+    @media screen and (min-width: $screen-min) and (max-width: $screen-max) {
+      .visible-#{$name}-block        { display: block !important; }
+      .visible-#{$name}-inline       { display: inline !important; }
+      .visible-#{$name}-inline-block { display: inline-block !important; }
+    }
+
+    @media screen and (min-width: $screen-min) {
+      .visible-#{$name}-min-block        { display: block !important; }
+      .visible-#{$name}-min-inline       { display: inline !important; }
+      .visible-#{$name}-min-inline-block { display: inline-block !important; }
+    }
+
+    @media screen and (max-width: $screen-max) {
+      .visible-#{$name}-max-block        { display: block !important; }
+      .visible-#{$name}-max-inline       { display: inline !important; }
+      .visible-#{$name}-max-inline-block { display: inline-block !important; }
+    }
+  }
+  @else {
+    @media screen and (max-width: $screen-max) {
+      .visible-#{$name}-block        { display: block !important; }
+      .visible-#{$name}-inline       { display: inline !important; }
+      .visible-#{$name}-inline-block { display: inline-block !important; }
+    }
   }
 }
 
 @mixin hidden($name, $screen-min, $screen-max) {
-  @if $screen-min != 0 {
+  @if $screen-min > 0 {
     @media screen and (min-width: $screen-min) and (max-width: $screen-max) {
       .hidden-#{$name} {
-        display: none;
+        display: none !important;
+      }
+    }
+    @media screen and (min-width: $screen-min) {
+      .hidden-#{$name}-min {
+        display: none !important;
+      }
+    }
+    @media screen and (max-width: $screen-max) {
+      .hidden-#{$name}-max {
+        display: none !important;
       }
     }
   }
   @else {
     @media screen and (max-width: $screen-max) {
       .hidden-#{$name} {
-        display: none;
+        display: none !important;
       }
     }
   }
 }
 
+
+// Floats
+// -----
+@mixin float($name, $screen-min, $screen-max) {
+  @each $direction in left, right, none {
+    @if $screen-min > 0 {
+      @media screen and (min-width: $screen-min) and (max-width: $screen-max) {
+        .float-#{$name}-#{$direction} {
+          float: $direction !important;
+        }
+      }
+      @media screen and (min-width: $screen-min) {
+        .float-#{$name}-min-#{$direction} {
+          float: $direction !important;
+        }
+      }
+      @media screen and (max-width: $screen-max) {
+        .float-#{$name}-max-#{$direction} {
+          float: $direction !important;
+        }
+      }
+    }
+    @else {
+      @media screen and (max-width: $screen-max) {
+        .float-#{$name}-#{$direction} {
+          float: $direction !important;
+        }
+      }
+    }
+  }
+}
 
 // Clearfix
 // --------
