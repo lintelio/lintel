@@ -2,32 +2,32 @@
 // ------
 $state-primary:         #0084ca !default;
 $state-secondary:       #0084ca !default;
-$state-danger:          #C0392B !default;
+$state-error:           #C0392B !default;
 $state-warning:         #F1C40F !default;
 $state-success:         #0F9E4B !default;
 $state-info:            #5bc0de !default;
 
-$state-primary-bg:      convertColorToBg($state-primary) !default;
+$state-primary-bg:      desaturate(lighten($state-primary, 30%), 5%) !default;
 $state-primary-text:    $state-primary !default;
 $state-primary-border:  $state-primary !default;
 
-$state-secondary-bg:    convertColorToBg($state-secondary) !default;
+$state-secondary-bg:    desaturate(lighten($state-secondary, 30%), 5%) !default;
 $state-secondary-text:  $state-secondary !default;
 $state-secondary-border:$state-secondary !default;
 
-$state-danger-bg:       convertColorToBg($state-danger) !default;
-$state-danger-text:     $state-danger !default;
-$state-danger-border:   $state-danger !default;
+$state-error-bg:        desaturate(lighten($state-error, 30%), 5%) !default;
+$state-error-text:      $state-error !default;
+$state-error-border:    $state-error !default;
 
-$state-warning-bg:      convertColorToBg($state-warning) !default;
+$state-warning-bg:      desaturate(lighten($state-warning, 30%), 15%) !default;
 $state-warning-text:    $state-warning !default;
 $state-warning-border:  $state-warning !default;
 
-$state-success-bg:      convertColorToBg($state-success) !default;
+$state-success-bg:      desaturate(lighten($state-success, 30%), 5%) !default;
 $state-success-text:    $state-success !default;
 $state-success-border:  $state-success !default;
 
-$state-info-bg:         convertColorToBg($state-info) !default;
+$state-info-bg:         desaturate(lighten($state-info, 30%), 5%) !default;
 $state-info-text:       $state-info !default;
 $state-info-border:     $state-info !default;
 
@@ -41,7 +41,7 @@ $gray-lighter:          lighten(#000, 93.5%) !default;
 $gray-lightest:         lighten(#000, 97.5%) !default;
 
 // Borders
-$border-base:                #ececec !default;
+$border-base:           #ececec !default;
 $border-darkest:        darken($border-base, 12.5%) !default;
 $border-darker:         darken($border-base, 7.5%) !default;
 $border-dark:           darken($border-base, 5%) !default;
@@ -53,9 +53,13 @@ $border-radius-lg:      6px !default;
 $border-radius-md:      4px !default;
 $border-radius-sm:      2px !default;
 
+$border-radius-base:    $border-radius-md;
+
 // Backgrounds
 $bg-base:               #f6f6f6 !default;
 $bg-light:              #fbfbfb !default;
+
+$bg-highlight:          #fbf7da !default;
 
 // Text
 $text-link:             $state-primary-text !default;
@@ -64,11 +68,11 @@ $text-link-hover:       $state-primary-text !default;
 $text-darkest:          $gray-darkest !default;
 $text-darker:           $gray-darker !default;
 $text-dark:             $gray-dark !default;
-$text-base:             $gray-dark !default;
 $text-light:            $gray-light !default;
 $text-lighter:          $gray-lighter !default;
 $text-lightest:         $gray-lightest !default;
 
+$text-base:             $gray-dark !default;
 $text-muted:            $text-light !default;
 
 
@@ -83,10 +87,11 @@ $box-shadow-dark:       0 1px 3px rgba(0, 0, 0, 0.15) !default;
 // ----------
 $font-size-base:            14px !default;
 
-$font-size-lg:              125%; // ceil($font-size-base * 1.25) !default;
-$font-size-md:              8 / 7 * 100%; // ceil($font-size-base * 8 / 7) !default;
-$font-size-sm:              80%;
-$font-size-xs:              70%;
+$font-size-xl:              125%; // ceil($font-size-base * 1.25) !default;
+$font-size-lg:              8 / 7 * 100%; // ceil($font-size-base * 8 / 7) !default;
+$font-size-md:              $font-size-base;
+$font-size-sm:              90%;
+$font-size-xs:              80%;
 
 $font-size-h1:              36px !default;
 $font-size-h2:              30px !default;
@@ -109,7 +114,33 @@ $line-height-base:          strip-unit($line-height-computed / $font-size-base) 
 $line-height-headings:      1.4;
 
 // Font Weights
-$font-weight-headings:      300 !default;
+$font-weight-headings:      700 !default;
+
+// Blockquotes
+$blockquote-border:         $border-base !default;
+$blockquote-border-size:    4px !default;
+$blockquote-bg:             transparent !default;
+
+// Code
+$code-cushion-y:            2px;
+$code-cushion-x:            4px;
+
+$code-font-size:            $font-size-sm;
+
+$code-bg:                   $bg-base;
+$code-text:                 $text-base;
+
+// Pre
+$pre-bg:                    $code-bg;
+$pre-border:                $border-base;
+$pre-text:                  $code-text;
+
+// Keyboard Input
+$kbd-cushion-y:             $code-cushion-y;
+$kbd-cushion-x:             8px;
+
+$kbd-bg:                    $text-darkest;
+$kbd-text:                  $text-lightest;
 
 
 // Spacing
@@ -120,23 +151,43 @@ $cushion-xl:            16px;
 $cushion-lg:            12px;
 $cushion-md:            10px;
 $cushion-sm:            8px;
-$cushion-xs:            6px;
-$cushion-2xs:           5px;
+$cushion-xs:            5px;
 
-$cushion-y-xl:          $cushion-xs !default;
-$cushion-x-xl:          $cushion-base !default;
+$cushion-y-2xl:         $cushion-base !default;
+$cushion-x-2xl:         $cushion-base + $cushion-md !default;
 
-$cushion-y-lg:          12px !default;
-$cushion-x-lg:          $cushion-xl !default;
+$cushion-y-xl:          $cushion-xl !default;
+$cushion-x-xl:          $cushion-base + $cushion-xs !default;
 
-$cushion-y-md:          $cushion-xs !default;  // base
+$cushion-y-lg:          $cushion-lg !default;
+$cushion-x-lg:          $cushion-base !default;
+
+$cushion-y-md:          $cushion-md !default;  // base
 $cushion-x-md:          $cushion-lg !default; // base
 
-$cushion-y-sm:          $cushion-2xs !default;
+$cushion-y-sm:          $cushion-sm !default;
 $cushion-x-sm:          $cushion-md !default;
 
-$cushion-y-xs:          1px !default;
-$cushion-x-xs:          $cushion-2xs !default;
+$cushion-y-xs:          $cushion-xs !default;
+$cushion-x-xs:          $cushion-sm !default;
+
+// $cushion-y-2xl:         $cushion-base !default;
+// $cushion-x-2xl:         $cushion-base + $cushion-xs !default;
+
+// $cushion-y-xl:          $cushion-xl !default;
+// $cushion-x-xl:          $cushion-base !default;
+
+// $cushion-y-lg:          $cushion-lg !default;
+// $cushion-x-lg:          $cushion-xl !default;
+
+// $cushion-y-md:          $cushion-sm !default;  // base
+// $cushion-x-md:          $cushion-lg !default; // base
+
+// $cushion-y-sm:          $cushion-2xs !default;
+// $cushion-x-sm:          $cushion-md !default;
+
+// $cushion-y-xs:          1px !default;
+// $cushion-x-xs:          $cushion-2xs !default;
 
 
 // Sizes
@@ -150,6 +201,8 @@ $thumb-md:              130px;
 $thumb-lg:              200px;
 $thumb-xl:              250px;
 $thumb-2xl:             300px;
+
+$thumb-base:            $thumb-sm;
 
 
 // Breakpoints

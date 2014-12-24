@@ -34,7 +34,7 @@
 
 @include border($state-primary-border, "primary");
 @include border($state-secondary-border, "secondary");
-@include border($state-danger-border, "danger");
+@include border($state-error-border, "error");
 @include border($state-warning-border, "warning");
 @include border($state-success-border, "success");
 @include border($state-info-border, "info");
@@ -47,7 +47,7 @@
 
 .bg-primary   { background-color: $state-primary-bg; }
 .bg-secondary { background-color: $state-secondary-bg; }
-.bg-danger    { background-color: $state-danger-bg; }
+.bg-error     { background-color: $state-error-bg; }
 .bg-warning   { background-color: $state-warning-bg; }
 .bg-success   { background-color: $state-success-bg; }
 .bg-info      { background-color: $state-info-bg; }

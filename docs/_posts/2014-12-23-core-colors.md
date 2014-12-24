@@ -13,7 +13,7 @@ categories: ["examples", "core", "colors"]
   <ul class="lt-colors">
     <li class="lt-colors-primary">$state-primary</li>
     <li class="lt-colors-secondary">$state-secondary</li>
-    <li class="lt-colors-danger">$state-danger</li>
+    <li class="lt-colors-error">$state-error</li>
     <li class="lt-colors-warning">$state-warning</li>
     <li class="lt-colors-success">$state-success</li>
     <li class="lt-colors-info">$state-info</li>
@@ -35,8 +35,8 @@ categories: ["examples", "core", "colors"]
     <li class="lt-colors-secondary-bg lt-colors-secondary-border lt-colors-secondary-text">
       $state-secondary
       </li>
-    <li class="lt-colors-danger-bg lt-colors-danger-border lt-colors-danger-text">
-      $state-danger
+    <li class="lt-colors-error-bg lt-colors-error-border lt-colors-error-text">
+      $state-error
       </li>
     <li class="lt-colors-warning-bg lt-colors-warning-border lt-colors-warning-text">
       $state-warning

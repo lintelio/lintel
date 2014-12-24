@@ -3,6 +3,11 @@
 .list {
   list-style: none;
   padding-left: 0;
+
+  > li {
+    padding-top: $cushion-y-md;
+    padding-bottom: $cushion-y-md;
+  }
 }
 
 // Sizes
@@ -102,6 +107,7 @@
 
   > li {
     display: inline-block;
+    margin-right: $cushion-x-md;
   }
 }
 
@@ -116,3 +122,61 @@
 
 // Definition lists
 // ----------------
+dl {
+  margin-top: $cushion-y-md;
+  margin-bottom: $cushion-y-md;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+
+  + dt {
+    margin-top: $cushion-y-md;
+  }
+}
+
+.dl-split {
+  @extend .cf;
+
+  > dt,
+  > dd {
+    margin: 0;
+    padding-top: $cushion-y-md + 1; // + 1 for border
+    padding-bottom: $cushion-y-md;
+    width: 50%;
+  }
+
+  > dt {
+    clear: left; // dt + dt should jump to new row
+    float: left;
+    position: relative;
+    text-transform: capitalize;
+  }
+
+  > dd {
+    clear: right; // dd + dd should jump to new row
+    float: right;
+
+    + dd {
+      padding-top: 0;
+    }
+  }
+
+  > dd + dt {
+    clear: both; // new term so clear all
+  }
+
+  > dd + dt::before {
+    border-top: 1px solid $border-base;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 200%; // span both columns
+  }
+}
+

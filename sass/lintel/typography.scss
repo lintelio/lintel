@@ -15,7 +15,7 @@ body {
 // Colors
 .text-primary   { color: $state-primary-text; }
 .text-secondary { color: $state-secondary-text; }
-.text-danger    { color: $state-danger-text; }
+.text-error     { color: $state-error-text; }
 .text-warning   { color: $state-warning-text; }
 .text-success   { color: $state-success-text; }
 .text-info      { color: $state-info-text; }
@@ -23,7 +23,6 @@ body {
 .text-darkest  { color: $text-darkest; }
 .text-darker   { color: $text-darker; }
 .text-dark     { color: $text-dark; }
-.text-base     { color: $text-base; }
 .text-light    { color: $text-light; }
 .text-lighter  { color: $text-lighter; }
 .text-lightest { color: $text-lightest; }
@@ -31,19 +30,25 @@ body {
 .text-muted    { color: $text-muted; }
 
 // Font sizes
-.text-base { font-size: $font-size-base; font-size: 1rem; }
-.text-lg   { font-size: $font-size-lg;}
-.text-md   { font-size: $font-size-md;}
-.text-sm   { font-size: $font-size-sm;}
-.text-xs   { font-size: $font-size-xs;}
+.text-xl   { font-size: $font-size-xl; }
+.text-lg   { font-size: $font-size-lg; }
+.text-md   { font-size: $font-size-md; }
+.text-sm   { font-size: $font-size-sm; }
+.text-xs   { font-size: $font-size-xs; }
 
 // Headings
-.text-h1 { font-size: $font-size-h1; font-weight: $font-weight-headings; line-height: $line-height-headings; }
-.text-h2 { font-size: $font-size-h2; font-weight: $font-weight-headings; line-height: $line-height-headings; }
-.text-h3 { font-size: $font-size-h3; font-weight: $font-weight-headings; line-height: $line-height-headings; }
-.text-h4 { font-size: $font-size-h4; font-weight: $font-weight-headings; line-height: $line-height-headings; }
-.text-h5 { font-size: $font-size-h5; font-weight: $font-weight-headings; line-height: $line-height-headings; }
-.text-h6 { font-size: $font-size-h6; font-weight: $font-weight-headings; line-height: $line-height-headings; }
+h1, h2, h3, h4, h5, h6,
+.text-h1, .text-h2, .text-h3, .text-h4, .text-h5, .text-h6 {
+  font-weight: $font-weight-headings;
+  line-height: $line-height-headings;
+}
+
+.text-h1 { font-size: $font-size-h1; }
+.text-h2 { font-size: $font-size-h2; }
+.text-h3 { font-size: $font-size-h3; }
+.text-h4 { font-size: $font-size-h4; }
+.text-h5 { font-size: $font-size-h5; }
+.text-h6 { font-size: $font-size-h6; }
 
 // Alignment
 .text-center  { text-align: center; }
@@ -55,4 +60,122 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+// Styles
+.text-italic     { font-style: italic; }
+.text-bold       { font-weight: bold; }
+.text-lowercase  { text-transform: lowercase; }
+.text-uppercase  { text-transform: uppercase; }
+.text-titlecase  { text-transform: capitalize; }
+.text-capitalize:first-letter { text-transform: capitalize; display: block;  }
+.text-capitalize-inline-block:first-letter { text-transform: capitalize; display: inline-block;  }
+
+.text-abbr       { font-size: $font-size-sm; text-transform: uppercase; }
+
+.text-base       { color: $text-base; font-size: $font-size-base; font-size: 1rem;}
+
+
+// Paragraphs
+// ----------
+p {
+  margin: $cushion-y-md 0;
+}
+
+
+// Highlight
+// ---------
+mark {
+  background-color: $bg-highlight;
+  padding: 0.2em 0.3em;
+}
+
+
+// Blockquote
+// ----------
+blockquote {
+  background: $blockquote-bg;
+  border-left: $blockquote-border-size solid $blockquote-border;
+  font-size: $font-size-lg;
+  margin-left: 0;
+  margin-right: 0;
+  padding: $cushion-y-md $cushion-x-lg;
+
+  > footer {
+    color: $text-muted;
+    font-size: $font-size-base;
+    margin: $cushion-y-md 0;
+
+    &:before {
+      content: '— '
+    }
+  }
+}
+
+.blockquote-right {
+  border-left: 0;
+  border-right: $blockquote-border-size solid $blockquote-border;
+  text-align: right;
+}
+
+.blockquote-center {
+  border: 0;
+  text-align: center;
+
+  > footer:before {
+    content: none;
+  }
+}
+
+
+// Code
+// ----
+code,
+kbd,
+pre,
+samp {
+  border-radius: $border-radius-md;
+  font-family: $font-family-monospace;
+}
+
+code {
+  background-color: $code-bg;
+  color: $code-text;
+  font-size: $code-font-size;
+  padding: $code-cushion-y $code-cushion-x;
+}
+
+kbd {
+  background-color: $kbd-bg;
+  color: $kbd-text;
+  font-size: $code-font-size;
+  padding: $code-cushion-y $code-cushion-x;
+
+  > kbd {
+    font-size: 100%;
+    font-weight: bold;
+    padding: 0;
+  }
+}
+
+pre {
+  background-color: $pre-bg;
+  border: 1px solid $pre-border;
+  color: $pre-text;
+  display: block;
+  font-size: ($font-size-base - 1);
+  line-height: $line-height-base;
+  margin: 0 0 $cushion-y-md;
+  padding: $cushion-y-md $cushion-x-md;
+  word-break: break-all;
+  word-wrap: break-word;
+
+  code {
+    background-color: transparent;
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
+    padding: 0;
+    white-space: pre-wrap;
+  }
 }

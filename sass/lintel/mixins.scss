@@ -24,6 +24,7 @@
     $modifier: "-" + $modifier;
   }
   .border#{$modifier}        { border: $width $style $color; }
+  .border-color#{$modifier}  { border-color: $color;}
   .border-y#{$modifier}      { border-top: $width $style $color; border-bottom: $width $style $color; }
   .border-x#{$modifier}      { border-left: $width $style $color; border-right: $width $style $color; }
   .border-top#{$modifier}    { border-top: $width $style $color; }

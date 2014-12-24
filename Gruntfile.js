@@ -48,11 +48,19 @@ module.exports = function (grunt) {
     // Compile sass
     sass: {
       options: {
-        sourceMap: true
+        sourceMap: true,
+        includePaths: [
+          'sass'
+        ]
       },
       dist: {
         files: {
           '<%= lintel.dist %>/lintel.css': 'sass/lintel.scss'
+        }
+      },
+      docs: {
+        files: {
+          '<%= lintel.docs %>/assets/css/docs.css': '<%= lintel.docs %>/_sass/docs.scss'
         }
       }
     },
@@ -60,7 +68,10 @@ module.exports = function (grunt) {
     // Autoprefix sass
     autoprefixer: {
       dist: {
-        src: ['<%= lintel.dist %>/lintel.css']
+        src: '<%= lintel.dist %>/lintel.css'
+      },
+      docs: {
+        src: '<%= lintel.docs %>/assets/css/docs.css'
       }
     },
 
@@ -70,6 +81,10 @@ module.exports = function (grunt) {
       dist: {
         src: '<%= lintel.dist %>/lintel.css',
         dest: '<%= lintel.dist %>/lintel.min.css'
+      },
+      docs: {
+        src: '<%= lintel.docs %>/assets/css/docs.css',
+        dest: '<%= lintel.docs %>/assets/css/docs.min.css',
       }
     },
 
@@ -125,6 +140,13 @@ module.exports = function (grunt) {
         ],
         tasks: ['jekyll:docs']
       },
+      docsSass: {
+        files: [
+          'sass/**/*.scss',
+          '<%= lintel.docs %>/**/*.scss'
+        ],
+        tasks: ['sass:docs', 'autoprefixer:docs', 'cssmin:docs', 'jekyll:docs']
+      },
       livereload: {
         files: [
           '<%= lintel.dist %>/**/*.css',
@@ -138,9 +160,9 @@ module.exports = function (grunt) {
 
   });
 
-  grunt.registerTask('compile', ['injector', 'sass', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('compile', ['injector', 'sass:dist', 'autoprefixer:dist', 'cssmin:dist']);
 
-  grunt.registerTask('docs', ['jekyll:docs', 'connect:docs']);
+  grunt.registerTask('docs', ['sass:docs', 'autoprefixer:docs', 'cssmin:docs', 'jekyll:docs', 'connect:docs']);
 
   grunt.registerTask('test', ['compile', 'csslint']);
 
