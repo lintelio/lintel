@@ -1,0 +1,15 @@
+# Site settings
+title: Lintel
+email: marius@lintel.io
+description: "Modular CSS framework for scalable applications"
+baseurl: ""
+url: "http://lintel.io"
+twitter_username: mariusc23
+github_username:  lintelio
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: pretty

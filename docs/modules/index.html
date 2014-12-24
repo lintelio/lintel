@@ -1,0 +1,11 @@
+---
+layout: page
+title: "Modules"
+category: "modules"
+---
+
+{% for example in site.posts %}
+  {% if example.categories contains page.category %}
+    {% include example.html %}
+  {% endif %}
+{% endfor %}

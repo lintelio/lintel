@@ -1,0 +1,11 @@
+---
+layout: page
+title: "Core"
+category: "core"
+---
+
+{% for example in site.posts %}
+  {% if example.categories contains page.category %}
+    {% include example.html %}
+  {% endif %}
+{% endfor %}

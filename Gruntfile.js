@@ -9,11 +9,18 @@
 'use strict';
 
 module.exports = function (grunt) {
+  var lintel = {
+    docs: 'docs',
+    docsCompiled: '.docs',
+    dist: 'dist'
+  };
+
   // load all npm grunt tasks
   require('load-grunt-tasks')(grunt);
 
   // Project configuration.
   grunt.initConfig({
+    lintel: lintel,
 
     // Inject sass files in lintel.scss
     injector: {
@@ -45,7 +52,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'dist/lintel.css': 'sass/lintel.scss'
+          '<%= lintel.dist %>/lintel.css': 'sass/lintel.scss'
         }
       }
     },
@@ -53,15 +60,16 @@ module.exports = function (grunt) {
     // Autoprefix sass
     autoprefixer: {
       dist: {
-        src: ['dist/lintel.css']
+        src: ['<%= lintel.dist %>/lintel.css']
       }
     },
 
     // Minify css
     cssmin: {
+      // TODO: sourcemap
       dist: {
-        src: 'dist/lintel.css',
-        dest: 'dist/lintel.min.css'
+        src: '<%= lintel.dist %>/lintel.css',
+        dest: '<%= lintel.dist %>/lintel.min.css'
       }
     },
 
@@ -71,7 +79,34 @@ module.exports = function (grunt) {
         csslintrc: '.csslintrc'
       },
       dist: {
-        src: ['dist/lintel.css']
+        src: ['<%= lintel.dist %>/lintel.css']
+      }
+    },
+
+    // Compile docs
+    jekyll: {
+      options: {
+        bundleExec: true,
+        src: '<%= lintel.docs %>'
+      },
+      docs: {
+        options: {
+          dest: '<%= lintel.docsCompiled %>'
+        }
+      }
+    },
+
+    // Serve docs
+    connect: {
+      docs: {
+        options: {
+          base: [
+            '<%= lintel.dist %>',
+            '<%= lintel.docsCompiled %>'
+          ],
+          livereload: true,
+          port: 4000
+        }
       }
     },
 
@@ -83,10 +118,17 @@ module.exports = function (grunt) {
         ],
         tasks: ['test']
       },
+      docs: {
+        files: [
+          '<%= lintel.docs %>/**/*.html',
+          '<%= lintel.docs %>/**/*.md'
+        ],
+        tasks: ['jekyll:docs']
+      },
       livereload: {
         files: [
-          'dist/**/*.css',
-          'docs/**/*.html'
+          '<%= lintel.dist %>/**/*.css',
+          '<%= lintel.docsCompiled %>/**/*.html'
         ],
         options: {
           livereload: true
@@ -98,9 +140,11 @@ module.exports = function (grunt) {
 
   grunt.registerTask('compile', ['injector', 'sass', 'autoprefixer', 'cssmin']);
 
+  grunt.registerTask('docs', ['jekyll:docs', 'connect:docs']);
+
   grunt.registerTask('test', ['compile', 'csslint']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['test', 'watch']);
+  grunt.registerTask('default', ['test', 'docs', 'watch']);
 
 };
