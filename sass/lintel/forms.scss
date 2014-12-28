@@ -1,0 +1,226 @@
+// Variables
+// ---------
+$form-group-margin-y:       $cushion-y-xl !default;
+$form-group-margin-x:       $form-group-margin-y !default;
+
+$label-font-weight:         bold !default;
+$label-margin-y:            $cushion-y-xs !default;
+$label-margin-x:            $cushion-x-xs !default;
+
+$input-bg:                  #fff !default;
+$input-border:              $border-darkest !default;
+$input-border-radius:       $border-radius-base !default;
+$input-color:               $text-base !default;
+
+$input-font-size:           1em !default;
+$input-font-weight:         normal !default;
+$input-line-height:         $line-height-base !default;
+
+$input-padding-y:           $cushion-y-xs  !default;
+$input-padding-x:           $cushion-x-md !default;
+
+$input-height-lg:           38px !default;
+$input-height-md:           34px !default;
+$input-height-sm:           30px !default;
+
+$input-height-base:         $input-height-md !default;
+
+// Focus
+$input-focus-border:        $state-info !default;
+
+// Disabled
+$input-disabled-cursor:     not-allowed !default;
+$input-disabled-bg:         $bg-light !default;
+$input-disabled-border:     $border-darker !default;
+$input-disabled-text:       $text-dark !default;
+
+// Checkboxes and Radios
+$checkbox-margin-y:         5px !default;
+$checkbox-adjust-y:         3px !default;
+$checkbox-width:            20px !default;
+
+// Base Styles
+// -----------
+input[type="search"] {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+
+// Form groups
+// -----------
+.form-group {
+  margin-bottom: $form-group-margin-y;
+}
+
+
+// Label
+// -----
+.form-label {
+  display: block;
+  font-weight: $label-font-weight;
+  margin-bottom: $label-margin-y;
+  max-width: 100%;
+}
+
+
+// Form controls
+// -------------
+.form-control {
+  background: $input-bg;
+  border: 1px solid $input-border;
+  border-radius: $input-border-radius;
+  color: $input-color;
+  display: block;
+  font-size: $input-font-size;
+  font-weight: $input-font-weight;
+  height: $input-height-base;
+  line-height: $input-line-height;
+  padding: $input-padding-y $input-padding-x;
+  width: 100%;
+
+  &:focus {
+    @extend %form-control-focus;
+  }
+
+  &.disabled,
+  &[disabled],
+  &[readonly] {
+    background-color: $input-disabled-bg;
+    border-color: $input-disabled-border;
+    color: $input-disabled-text;
+    cursor: $input-disabled-cursor;
+  }
+}
+
+// Focus
+%form-control-focus {
+  border-color: $input-focus-border;
+  box-shadow: 0 0 6px transparentize($input-focus-border, .6);
+  outline: 0 none;
+}
+
+// Apply margin if using label child syntax
+.form-label > .form-control {
+  margin-top: $label-margin-y;
+}
+
+// Placeholder
+.form-control-placeholder {
+  color: $input-color;
+  display: block;
+  font-size: $input-font-size;
+  font-weight: $input-font-weight;
+  height: $input-height-base;
+  padding: $input-padding-y 0;
+}
+
+// Textarea
+textarea.form-control {
+  height: auto;
+}
+
+
+// Checkboxes and Radios
+// ---------------------
+%radbox-label {
+  display: block;
+  padding-left: $checkbox-width;
+  position: relative;
+  margin: $checkbox-margin-y 0;
+}
+
+%radbox {
+  line-height: normal;
+  margin-top: $checkbox-adjust-y;
+  margin-left: -$checkbox-width;
+  position: absolute;
+}
+
+.form-checkbox,
+.form-radio {
+  @extend %radbox-label;
+}
+
+.form-checkbox-inline,
+.form-radio-inline {
+  @extend %radbox-label;
+  display: inline-block;
+  margin-right: $label-margin-x;
+}
+
+.form-checkbox > input[type="checkbox"],
+.form-checkbox-inline > input[type="checkbox"] {
+  @extend %radbox;
+}
+
+.form-radio > input[type="radio"],
+.form-radio-inline > input[type="radio"] {
+  @extend %radbox;
+}
+
+
+// Help text
+// ---------
+.form-help {
+  color: $text-muted;
+  margin: $label-margin-y 0;
+}
+
+
+// Inline forms
+// ------------
+%form-inline-styles {
+  .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: $label-margin-x;
+  }
+
+  .form-label {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  .form-control {
+    margin-left: $label-margin-x;
+  }
+
+  .visible-sr + .form-control {
+    margin-left: 0;
+  }
+
+  .form-control {
+    display: inline-block;
+    margin-top: 0;
+    width: auto;
+  }
+
+  .form-help {
+    display: inline-block;
+    margin-left: $label-margin-x;
+  }
+
+  %radbox-label {
+    display: inline-block;
+    margin: 0 0 0 $label-margin-x;
+  }
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .form-inline { @extend %form-inline-styles; }
+}

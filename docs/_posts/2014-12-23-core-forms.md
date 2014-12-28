@@ -18,23 +18,31 @@ categories: ["examples", "core", "forms"]
 
     <div class="form-group">
       <label class="form-label">
-        Label
+        Label (child)
         <input class="form-control" type="text" placeholder="Label">
       </label>
     </div>
 
     <div class="form-group">
       <label class="form-label">Label</label>
-      <input class="form-control" type="text" placeholder="Label">
-      <p class="form-help">This is helpful message.</p>
+      <select class="form-control">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+      <p class="form-help">Help text.</p>
     </div>
 
     <div class="form-group">
       <label class="form-label">
-        Label
-        <input class="form-control" type="text" placeholder="Label">
+        Label (child)
+        <select class="form-control">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
       </label>
-      <p class="form-help">This is helpful message.</p>
+      <p class="form-help">Help text.</p>
     </div>
 
     <div class="form-group">
@@ -55,11 +63,11 @@ categories: ["examples", "core", "forms"]
 
     <div class="form-group">
       <span class="form-label">Radio Buttons</span>
-      <label class="form-radio">
-        <input type="radio" name="exampleRadio1"> Option 1
+      <label class="form-radio-inline">
+        <input type="radio" name="exampleRadio1"> Inline Option 1
       </label>
-      <label class="form-radio">
-        <input type="radio" name="exampleRadio1"> Option 2
+      <label class="form-radio-inline">
+        <input type="radio" name="exampleRadio1"> Inline Option 2
       </label>
     </div>
 
@@ -78,7 +86,7 @@ categories: ["examples", "core", "forms"]
 
   <div class="form-group">
     <label class="form-label">
-      Label
+      Label (child)
       <input class="form-control" type="text" placeholder="Label">
     </label>
   </div>
@@ -86,15 +94,15 @@ categories: ["examples", "core", "forms"]
   <div class="form-group">
     <label class="form-label">Label</label>
     <input class="form-control" type="text" placeholder="Label">
-    <p class="form-help">This is helpful message.</p>
+    <p class="form-help">Help text.</p>
   </div>
 
   <div class="form-group">
     <label class="form-label">
-      Label
+      Label (child)
       <input class="form-control" type="text" placeholder="Label">
     </label>
-    <p class="form-help">This is helpful message.</p>
+    <p class="form-help">Help text.</p>
   </div>
 
   <div class="form-group">
@@ -115,11 +123,11 @@ categories: ["examples", "core", "forms"]
 
   <div class="form-group">
     <span class="form-label">Radio Buttons</span>
-    <label class="form-radio">
-      <input type="radio" name="exampleRadio1"> Option 1
+    <label class="form-radio-inline">
+      <input type="radio" name="exampleRadio1"> Inline Option 1
     </label>
-    <label class="form-radio">
-      <input type="radio" name="exampleRadio1"> Option 2
+    <label class="form-radio-inline">
+      <input type="radio" name="exampleRadio1"> Inline Option 2
     </label>
   </div>
 
@@ -128,10 +136,10 @@ categories: ["examples", "core", "forms"]
 </div>
 
 
-## Inline form
+## Inline forms
 <div class="lt-example">
 
-  <form>
+  <form class="form-inline">
 
     <div class="form-group">
       <label class="form-label">Label</label>
@@ -141,30 +149,45 @@ categories: ["examples", "core", "forms"]
     <div class="form-group">
       <label class="form-label">
         Label
-        <input class="form-control" type="text" placeholder="Label">
+        <input class="form-control" type="text" placeholder="Label (child)">
       </label>
     </div>
 
-    <div class="form-g"
+    <br/><br/>
 
     <div class="form-group">
       <label class="form-label">Label</label>
       <input class="form-control" type="text" placeholder="Label">
-      <p class="form-help">This is helpful message.</p>
-    </div>
-
-    <div class="form-group">
-      <label class="form-label">
-        Label
-        <input class="form-control" type="text" placeholder="Label">
-      </label>
-      <p class="form-help">This is helpful message.</p>
+      <p class="form-help">Help text.</p>
     </div>
 
     <div class="form-group">
       <label class="form-checkbox">
         <input type="checkbox" name="exampleCheckbox1"> Standalone Checkbox
       </label>
+    </div>
+
+    <br/><br/>
+
+    <div class="form-group">
+      <label class="form-label">
+        Label
+        <input class="form-control" type="text" placeholder="Label (child)">
+      </label>
+      <p class="form-help">Help text.</p>
+    </div>
+
+    <div class="form-group">
+      <label class="form-checkbox">
+        <input type="checkbox" name="exampleCheckbox1"> Standalone Checkbox
+      </label>
+    </div>
+
+    <br/><br/>
+
+    <div class="form-group">
+      <label class="form-label">Label</label>
+      <input class="form-control" type="text" placeholder="Label">
     </div>
 
     <div class="form-group">
@@ -176,6 +199,51 @@ categories: ["examples", "core", "forms"]
         <input type="checkbox" name="exampleCheckbox3"> Option 2
       </label>
     </div>
+
+    <br/><br/>
+
+    <div class="form-group">
+      <label class="form-label">
+        Label
+        <input class="form-control" type="text" placeholder="Label (child)">
+      </label>
+    </div>
+
+    <div class="form-group">
+      <span class="form-label">Checkboxes</span>
+      <label class="form-checkbox-inline">
+        <input type="checkbox" name="exampleCheckbox2"> Inline Option 1
+      </label>
+      <label class="form-checkbox-inline">
+        <input type="checkbox" name="exampleCheckbox3"> Inline Option 2
+      </label>
+    </div>
+
+    <br/><br/>
+
+    <div class="form-group">
+      <label class="form-label visible-sr">Label</label>
+      <input class="form-control" type="text" placeholder="Label">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">
+        <span class="visible-sr">Label (child)</span>
+        <input class="form-control" type="text" placeholder="Label (child)">
+      </label>
+    </div>
+
+    <div class="form-group">
+      <span class="form-label visible-sr">Checkboxes</span>
+      <label class="form-checkbox">
+        <input type="checkbox" name="exampleCheckbox2"> Option 1
+      </label>
+      <label class="form-checkbox">
+        <input type="checkbox" name="exampleCheckbox3"> Option 2
+      </label>
+    </div>
+
+    <br/><br/>
 
     <div class="form-group">
       <span class="form-label">Radio Buttons</span>

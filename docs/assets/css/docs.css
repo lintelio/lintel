@@ -1,3 +1,105 @@
+input[type="search"] {
+  box-sizing: border-box;
+  -webkit-appearance: none; }
+
+input[type="file"] {
+  display: block; }
+
+input[type="range"] {
+  display: block;
+  width: 100%; }
+
+select[multiple], select[size] {
+  height: auto; }
+
+.form-group {
+  margin-bottom: 16px; }
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  max-width: 100%; }
+
+.form-control {
+  background: #fff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  color: #333333;
+  display: block;
+  font-size: 1em;
+  font-weight: normal;
+  height: 34px;
+  line-height: strip-unit(1.42857);
+  padding: 5px 12px;
+  width: 100%; }
+  .form-control.disabled, .form-control[disabled], .form-control[readonly] {
+    background-color: #fbfbfb;
+    border-color: #d9d9d9;
+    color: #333333;
+    cursor: not-allowed; }
+
+.form-control:focus, .lt-form-control-focused {
+  border-color: #59abe3;
+  box-shadow: 0 0 6px rgba(89, 171, 227, 0.4);
+  outline: 0 none; }
+
+.form-label > .form-control {
+  margin-top: 5px; }
+
+.form-control-placeholder {
+  color: #333333;
+  display: block;
+  font-size: 1em;
+  font-weight: normal;
+  height: 34px;
+  padding: 5px 0; }
+
+textarea.form-control {
+  height: auto; }
+
+.form-checkbox, .form-radio, .form-checkbox-inline, .form-radio-inline {
+  display: block;
+  padding-left: 20px;
+  position: relative;
+  margin: 5px 0; }
+
+.form-checkbox > input[type="checkbox"], .form-checkbox-inline > input[type="checkbox"], .form-radio > input[type="radio"], .form-radio-inline > input[type="radio"] {
+  line-height: normal;
+  margin-top: 3px;
+  margin-left: -20px;
+  position: absolute; }
+
+.form-checkbox-inline, .form-radio-inline {
+  display: inline-block;
+  margin-right: 8px; }
+
+.form-help {
+  color: #868686;
+  margin: 5px 0; }
+
+.form-inline .form-group {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 8px; }
+.form-inline .form-label {
+  display: inline-block;
+  margin-bottom: 0; }
+.form-inline .form-control {
+  margin-left: 8px; }
+.form-inline .visible-sr + .form-control {
+  margin-left: 0; }
+.form-inline .form-control {
+  display: inline-block;
+  margin-top: 0;
+  width: auto; }
+.form-inline .form-help {
+  display: inline-block;
+  margin-left: 8px; }
+.form-inline .form-checkbox, .form-inline .form-radio, .form-inline .form-checkbox-inline, .form-inline .form-radio-inline {
+  display: inline-block;
+  margin: 0 0 0 8px; }
+
 .list, .list-stacked, .list-striped, .list-inline {
   list-style: none;
   padding-left: 0; }

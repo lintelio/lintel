@@ -145,6 +145,12 @@
 .lt-colors-success-border   { border-color: $state-success-border !important; }
 .lt-colors-info-border      { border-color: $state-info-border !important; }
 
+
+// Forms
+// -----
+.lt-form-control-focused {
+  @extend .form-control:focus;
+}
 .lt-colors-primary-text     { color: $state-primary-text !important; }
 .lt-colors-secondary-text   { color: $state-secondary-text !important; }
 .lt-colors-error-text       { color: $state-error-text !important; }
