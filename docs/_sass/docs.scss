@@ -1,10 +1,13 @@
 @import 'lintel';
 @import 'highlight';
 
+// TODO: move to lintel core
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
+// Article
+// -------
 .lt-article {
   margin: 0 auto;
   padding: 0 $cushion-x-lg;
@@ -23,6 +26,16 @@
   }
 }
 
+@media screen and (min-width: $screen-md-min) {
+  .lt-article {
+    padding: 0;
+    width: 80vw;
+  }
+}
+
+
+// Example
+// -------
 .lt-example {
   &:before {
     // border-top: 1px dotted $border-base;
@@ -37,6 +50,9 @@
   }
 }
 
+
+// Code
+// ----
 .lt-code {
   background: $bg-base;
   border: 1px solid $border-base;
@@ -47,31 +63,9 @@
   margin-right: -$cushion-x-md;
 }
 
-@media screen and (min-width: $screen-md-min) {
-  .lt-article {
-    padding: 0;
-    width: 80vw;
-  }
 
-  // .lt-example:before {
-  //   margin-left: -10vw;
-  //   padding-left: 10vw;
-  //   width: 100vw;
-  // }
-
-  // .lt-code {
-  //   margin-left: -10vw;
-  //   margin-right: 0;
-  //   width: 100vw;
-
-  //   > .highlight {
-  //     padding-left: 0;
-  //     padding-right: 0;
-  //     width: 80vw;
-  //   }
-  // }
-}
-
+// Tips (alerts)
+// ----
 .lt-tip {
   border-left: 3px solid $border-base;
   background-color: $bg-light;
@@ -107,3 +101,69 @@
     color: $state-warning-text;
   }
 }
+
+
+// Colors
+// ------
+.lt-colors {
+  list-style: none;
+  padding: 0;
+
+  > li {
+    background-color: $bg-light;
+    border: 1px solid transparent;
+    border-radius: $border-radius-base;
+    display: inline-block;
+    font-size: $font-size-xs;
+    margin-bottom: $cushion-base;
+    margin-right: $cushion-base;
+    height: $thumb-sm;
+    position: relative;
+    width: $thumb-sm;
+    vertical-align: top;
+  }
+}
+
+.lt-colors-primary          { background-color: $state-primary !important;   border-color: $state-primary !important;   color: #fff; }
+.lt-colors-secondary        { background-color: $state-secondary !important; border-color: $state-secondary !important; color: #fff; }
+.lt-colors-error            { background-color: $state-error !important;     border-color: $state-error !important;     color: #fff; }
+.lt-colors-warning          { background-color: $state-warning !important;   border-color: $state-warning !important;   color: #fff; }
+.lt-colors-success          { background-color: $state-success !important;   border-color: $state-success !important;   color: #fff; }
+.lt-colors-info             { background-color: $state-info !important;      border-color: $state-info !important;      color: #fff; }
+
+.lt-colors-primary-bg       { background-color: $state-primary-bg !important; }
+.lt-colors-secondary-bg     { background-color: $state-secondary-bg !important; }
+.lt-colors-error-bg         { background-color: $state-error-bg !important; }
+.lt-colors-warning-bg       { background-color: $state-warning-bg !important; }
+.lt-colors-success-bg       { background-color: $state-success-bg !important; }
+.lt-colors-info-bg          { background-color: $state-info-bg !important; }
+
+.lt-colors-primary-border   { border-color: $state-primary-border !important; }
+.lt-colors-secondary-border { border-color: $state-secondary-border !important; }
+.lt-colors-error-border     { border-color: $state-error-border !important; }
+.lt-colors-warning-border   { border-color: $state-warning-border !important; }
+.lt-colors-success-border   { border-color: $state-success-border !important; }
+.lt-colors-info-border      { border-color: $state-info-border !important; }
+
+.lt-colors-primary-text     { color: $state-primary-text !important; }
+.lt-colors-secondary-text   { color: $state-secondary-text !important; }
+.lt-colors-error-text       { color: $state-error-text !important; }
+.lt-colors-warning-text     { color: $state-warning-text !important; }
+.lt-colors-success-text     { color: $state-success-text !important; }
+.lt-colors-info-text        { color: $state-info-text !important; }
+
+.lt-colors-gray-darkest     { background-color: $gray-darkest !important; }
+.lt-colors-gray-darker      { background-color: $gray-darker !important; }
+.lt-colors-gray-dark        { background-color: $gray-dark !important; }
+.lt-colors-gray-base        { background-color: $gray-base !important; }
+.lt-colors-gray-light       { background-color: $gray-light !important; }
+.lt-colors-gray-lighter     { background-color: $gray-lighter !important; }
+.lt-colors-gray-lightest    { background-color: $gray-lightest !important; }
+
+.lt-colors-border-darkest   { background-color: $border-darkest !important; }
+.lt-colors-border-darker    { background-color: $border-darker !important; }
+.lt-colors-border-dark      { background-color: $border-dark !important; }
+.lt-colors-border-base      { background-color: $border-base !important; }
+.lt-colors-border-light     { background-color: $border-light !important; }
+.lt-colors-border-lighter   { background-color: $border-lighter !important; }
+.lt-colors-border-lightest  { background-color: $border-lightest !important; }

@@ -1,35 +1,35 @@
 // Colors
 // ------
-$state-primary:         #0084ca !default;
-$state-secondary:       #0084ca !default;
-$state-error:           #C0392B !default;
-$state-warning:         #F1C40F !default;
-$state-success:         #0F9E4B !default;
-$state-info:            #5bc0de !default;
+$state-primary:         #4b77be !default;
+$state-secondary:       #16a085 !default;
+$state-error:           #cf3a24 !default;
+$state-warning:         #eb9532 !default;
+$state-success:         #7a942e !default;
+$state-info:            #59abe3 !default;
 
-$state-primary-bg:      desaturate(lighten($state-primary, 30%), 5%) !default;
-$state-primary-text:    $state-primary !default;
-$state-primary-border:  $state-primary !default;
+$state-primary-bg:      desaturate(lighten($state-primary, 45%), 5%) !default;
+$state-primary-text:    darken($state-primary, 10%) !default;
+$state-primary-border:  desaturate(lighten($state-primary, 22.5%), 5%) !default;
 
-$state-secondary-bg:    desaturate(lighten($state-secondary, 30%), 5%) !default;
-$state-secondary-text:  $state-secondary !default;
-$state-secondary-border:$state-secondary !default;
+$state-secondary-bg:    desaturate(lighten($state-secondary, 60%), 20%) !default;
+$state-secondary-text:  darken($state-secondary, 10%) !default;
+$state-secondary-border:desaturate(lighten($state-secondary, 30%), 40%) !default;
 
-$state-error-bg:        desaturate(lighten($state-error, 30%), 5%) !default;
-$state-error-text:      $state-error !default;
-$state-error-border:    $state-error !default;
+$state-error-bg:        desaturate(lighten($state-error, 50%), 10%) !default;
+$state-error-text:      darken($state-error, 10%) !default;
+$state-error-border:    desaturate(lighten($state-error, 27.5%), 30%) !default;
 
-$state-warning-bg:      desaturate(lighten($state-warning, 30%), 15%) !default;
-$state-warning-text:    $state-warning !default;
-$state-warning-border:  $state-warning !default;
+$state-warning-bg:      desaturate(lighten($state-warning, 40%), 15%) !default;
+$state-warning-text:    darken($state-warning, 25%) !default;
+$state-warning-border:  desaturate(lighten($state-warning, 15%), 30%) !default;
 
-$state-success-bg:      desaturate(lighten($state-success, 30%), 5%) !default;
-$state-success-text:    $state-success !default;
-$state-success-border:  $state-success !default;
+$state-success-bg:      desaturate(lighten($state-success, 55%), 15%) !default;
+$state-success-text:    darken($state-success, 10%) !default;
+$state-success-border:  desaturate(lighten($state-success, 30%), 25%) !default;
 
-$state-info-bg:         desaturate(lighten($state-info, 30%), 5%) !default;
-$state-info-text:       $state-info !default;
-$state-info-border:     $state-info !default;
+$state-info-bg:         desaturate(lighten($state-info, 35%), 5%) !default;
+$state-info-text:       darken($state-info, 20%) !default;
+$state-info-border:     desaturate(lighten($state-info, 15%), 35%) !default;
 
 // Grays
 $gray-darkest:          lighten(#000, 10%) !default;

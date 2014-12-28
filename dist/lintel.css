@@ -437,22 +437,22 @@ body {
   line-height: strip-unit(1.42857); }
 
 .text-primary {
-  color: #0084ca; }
+  color: #395f9d; }
 
 .text-secondary {
-  color: #0084ca; }
+  color: #107360; }
 
 .text-error {
-  color: #C0392B; }
+  color: #a42e1c; }
 
 .text-warning {
-  color: #F1C40F; }
+  color: #90530e; }
 
 .text-success {
-  color: #0F9E4B; }
+  color: #5a6d22; }
 
 .text-info {
-  color: #5bc0de; }
+  color: #1f79b7; }
 
 .text-darkest {
   color: #1a1a1a; }
@@ -1140,160 +1140,160 @@ pre {
   border-left: 1px solid #f9f9f9; }
 
 .border-primary {
-  border: 1px solid #0084ca; }
+  border: 1px solid #a3b7d9; }
 
 .border-color-primary {
-  border-color: #0084ca; }
+  border-color: #a3b7d9; }
 
 .border-y-primary {
-  border-top: 1px solid #0084ca;
-  border-bottom: 1px solid #0084ca; }
+  border-top: 1px solid #a3b7d9;
+  border-bottom: 1px solid #a3b7d9; }
 
 .border-x-primary {
-  border-left: 1px solid #0084ca;
-  border-right: 1px solid #0084ca; }
+  border-left: 1px solid #a3b7d9;
+  border-right: 1px solid #a3b7d9; }
 
 .border-top-primary {
-  border-top: 1px solid #0084ca; }
+  border-top: 1px solid #a3b7d9; }
 
 .border-right-primary {
-  border-right: 1px solid #0084ca; }
+  border-right: 1px solid #a3b7d9; }
 
 .border-bottom-primary {
-  border-bottom: 1px solid #0084ca; }
+  border-bottom: 1px solid #a3b7d9; }
 
 .border-left-primary {
-  border-left: 1px solid #0084ca; }
+  border-left: 1px solid #a3b7d9; }
 
 .border-secondary {
-  border: 1px solid #0084ca; }
+  border: 1px solid #88c7bb; }
 
 .border-color-secondary {
-  border-color: #0084ca; }
+  border-color: #88c7bb; }
 
 .border-y-secondary {
-  border-top: 1px solid #0084ca;
-  border-bottom: 1px solid #0084ca; }
+  border-top: 1px solid #88c7bb;
+  border-bottom: 1px solid #88c7bb; }
 
 .border-x-secondary {
-  border-left: 1px solid #0084ca;
-  border-right: 1px solid #0084ca; }
+  border-left: 1px solid #88c7bb;
+  border-right: 1px solid #88c7bb; }
 
 .border-top-secondary {
-  border-top: 1px solid #0084ca; }
+  border-top: 1px solid #88c7bb; }
 
 .border-right-secondary {
-  border-right: 1px solid #0084ca; }
+  border-right: 1px solid #88c7bb; }
 
 .border-bottom-secondary {
-  border-bottom: 1px solid #0084ca; }
+  border-bottom: 1px solid #88c7bb; }
 
 .border-left-secondary {
-  border-left: 1px solid #0084ca; }
+  border-left: 1px solid #88c7bb; }
 
 .border-error {
-  border: 1px solid #C0392B; }
+  border: 1px solid #d9ada6; }
 
 .border-color-error {
-  border-color: #C0392B; }
+  border-color: #d9ada6; }
 
 .border-y-error {
-  border-top: 1px solid #C0392B;
-  border-bottom: 1px solid #C0392B; }
+  border-top: 1px solid #d9ada6;
+  border-bottom: 1px solid #d9ada6; }
 
 .border-x-error {
-  border-left: 1px solid #C0392B;
-  border-right: 1px solid #C0392B; }
+  border-left: 1px solid #d9ada6;
+  border-right: 1px solid #d9ada6; }
 
 .border-top-error {
-  border-top: 1px solid #C0392B; }
+  border-top: 1px solid #d9ada6; }
 
 .border-right-error {
-  border-right: 1px solid #C0392B; }
+  border-right: 1px solid #d9ada6; }
 
 .border-bottom-error {
-  border-bottom: 1px solid #C0392B; }
+  border-bottom: 1px solid #d9ada6; }
 
 .border-left-error {
-  border-left: 1px solid #C0392B; }
+  border-left: 1px solid #d9ada6; }
 
 .border-warning {
-  border: 1px solid #F1C40F; }
+  border: 1px solid #dcb78e; }
 
 .border-color-warning {
-  border-color: #F1C40F; }
+  border-color: #dcb78e; }
 
 .border-y-warning {
-  border-top: 1px solid #F1C40F;
-  border-bottom: 1px solid #F1C40F; }
+  border-top: 1px solid #dcb78e;
+  border-bottom: 1px solid #dcb78e; }
 
 .border-x-warning {
-  border-left: 1px solid #F1C40F;
-  border-right: 1px solid #F1C40F; }
+  border-left: 1px solid #dcb78e;
+  border-right: 1px solid #dcb78e; }
 
 .border-top-warning {
-  border-top: 1px solid #F1C40F; }
+  border-top: 1px solid #dcb78e; }
 
 .border-right-warning {
-  border-right: 1px solid #F1C40F; }
+  border-right: 1px solid #dcb78e; }
 
 .border-bottom-warning {
-  border-bottom: 1px solid #F1C40F; }
+  border-bottom: 1px solid #dcb78e; }
 
 .border-left-warning {
-  border-left: 1px solid #F1C40F; }
+  border-left: 1px solid #dcb78e; }
 
 .border-success {
-  border: 1px solid #0F9E4B; }
+  border: 1px solid #b9c497; }
 
 .border-color-success {
-  border-color: #0F9E4B; }
+  border-color: #b9c497; }
 
 .border-y-success {
-  border-top: 1px solid #0F9E4B;
-  border-bottom: 1px solid #0F9E4B; }
+  border-top: 1px solid #b9c497;
+  border-bottom: 1px solid #b9c497; }
 
 .border-x-success {
-  border-left: 1px solid #0F9E4B;
-  border-right: 1px solid #0F9E4B; }
+  border-left: 1px solid #b9c497;
+  border-right: 1px solid #b9c497; }
 
 .border-top-success {
-  border-top: 1px solid #0F9E4B; }
+  border-top: 1px solid #b9c497; }
 
 .border-right-success {
-  border-right: 1px solid #0F9E4B; }
+  border-right: 1px solid #b9c497; }
 
 .border-bottom-success {
-  border-bottom: 1px solid #0F9E4B; }
+  border-bottom: 1px solid #b9c497; }
 
 .border-left-success {
-  border-left: 1px solid #0F9E4B; }
+  border-left: 1px solid #b9c497; }
 
 .border-info {
-  border: 1px solid #5bc0de; }
+  border: 1px solid #afc8d9; }
 
 .border-color-info {
-  border-color: #5bc0de; }
+  border-color: #afc8d9; }
 
 .border-y-info {
-  border-top: 1px solid #5bc0de;
-  border-bottom: 1px solid #5bc0de; }
+  border-top: 1px solid #afc8d9;
+  border-bottom: 1px solid #afc8d9; }
 
 .border-x-info {
-  border-left: 1px solid #5bc0de;
-  border-right: 1px solid #5bc0de; }
+  border-left: 1px solid #afc8d9;
+  border-right: 1px solid #afc8d9; }
 
 .border-top-info {
-  border-top: 1px solid #5bc0de; }
+  border-top: 1px solid #afc8d9; }
 
 .border-right-info {
-  border-right: 1px solid #5bc0de; }
+  border-right: 1px solid #afc8d9; }
 
 .border-bottom-info {
-  border-bottom: 1px solid #5bc0de; }
+  border-bottom: 1px solid #afc8d9; }
 
 .border-left-info {
-  border-left: 1px solid #5bc0de; }
+  border-left: 1px solid #afc8d9; }
 
 .bg-base {
   background-color: #f6f6f6; }
@@ -1302,22 +1302,22 @@ pre {
   background-color: #fbfbfb; }
 
 .bg-primary {
-  background-color: #68c8fb; }
+  background-color: #f4f6fb; }
 
 .bg-secondary {
-  background-color: #68c8fb; }
+  background-color: #eefaf8; }
 
 .bg-error {
-  background-color: #e6a59e; }
+  background-color: #fdf6f5; }
 
 .bg-warning {
-  background-color: #f2e3a7; }
+  background-color: #fcf5ed; }
 
 .bg-success {
-  background-color: #5cea98; }
+  background-color: #f1f4e7; }
 
 .bg-info {
-  background-color: #dbf0f7; }
+  background-color: #f2f8fc; }
 
 .shadow-light {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); }

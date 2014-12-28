@@ -18,7 +18,7 @@ Use the `h1` through `h6` tags or `.text-h1` through `.text-h6` helper classes.
   <h2>h2 - This heading is chubby</h2>
   <h3>h3 - Many donuts, much weight</h3>
   <h4>h4 - Lean heading machine</h4>
-  <h5>h5 - Slight anorexic</h5>
+  <h5>h5 - Slightly anorexic</h5>
   <h6>h6 - Feed me</h6>
 
   <h1 class="text-h5">h1 - This tag tells screen readers it's important, but it looks tiny.</h1>
@@ -30,7 +30,7 @@ Use the `h1` through `h6` tags or `.text-h1` through `.text-h6` helper classes.
 <h2>h2 - This heading is chubby</h2>
 <h3>h3 - Many donuts, much weight</h3>
 <h4>h4 - Lean heading machine</h4>
-<h5>h5 - Slight anorexic</h5>
+<h5>h5 - Slightly anorexic</h5>
 <h6>h6 - Feed me</h6>
 
 <h1 class="text-h5">h1 - This tag tells screen readers it's important, but it looks tiny.</h1>
@@ -49,7 +49,7 @@ You can control font-size through the following modifiers:
 </p>
 
 <div class="lt-example">
-  <p class="text-xl">This paragraph is just fat.</p>
+  <p class="text-xl">This paragraph is fat and juicy.</p>
   <p class="text-lg">This paragraph is slightly overweight.</p>
   <p class="text-md text-base">This is paragraph is fit and normal.</p>
   <p class="text-sm">This paragraph is small and nimble.</p>

@@ -24,7 +24,7 @@ categories: ["examples", "core", "lists"]
 </div>
 
 
-### Modifiers
+### Sizes
 `*` = x or y
 
 <ul class="list">
