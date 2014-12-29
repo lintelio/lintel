@@ -20,7 +20,7 @@ $state-error-text:      darken($state-error, 10%) !default;
 $state-error-border:    desaturate(lighten($state-error, 27.5%), 30%) !default;
 
 $state-warning-bg:      desaturate(lighten($state-warning, 40%), 15%) !default;
-$state-warning-text:    darken($state-warning, 25%) !default;
+$state-warning-text:    darken($state-warning, 20%) !default;
 $state-warning-border:  desaturate(lighten($state-warning, 15%), 30%) !default;
 
 $state-success-bg:      desaturate(lighten($state-success, 55%), 15%) !default;

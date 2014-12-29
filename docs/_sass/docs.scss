@@ -83,7 +83,7 @@
 
 .lt-tip-info,
 .lt-tip-extend {
-  border-color: $state-info-border;
+  border-color: $state-info-text;
 }
 
 .lt-tip-extend {
@@ -94,7 +94,7 @@
 }
 
 .lt-tip-accessibility {
-  border-color: $state-warning-border;
+  border-color: $state-warning-text;
 
   &::before {
     content: 'Accessibility';
