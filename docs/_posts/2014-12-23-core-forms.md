@@ -501,6 +501,9 @@ See MDN <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
         Label
         <input class="form-control" type="text" placeholder="Label">
       </label>
+      <p class="form-help">
+        We can't compete with Mom!
+      </p>
     </div>
 
     <div class="form-group form-group-warning">
@@ -508,6 +511,9 @@ See MDN <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
         Label
         <input class="form-control" type="text" placeholder="Label">
       </label>
+      <p class="form-help">
+        Did he at least die painlessly?
+      </p>
     </div>
 
     <div class="form-group form-group-success">
@@ -515,6 +521,9 @@ See MDN <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
         Label
         <input class="form-control" type="text" placeholder="Label">
       </label>
+      <p class="form-help">
+        A sexy mistake.
+      </p>
     </div>
 
     <div class="form-group">
@@ -568,6 +577,70 @@ See MDN <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
     <label class="form-checkbox form-group-success">
       <input type="checkbox" name="exampleCheckbox3"> Option 3
     </label>
+  </div>
+
+</form>
+{% endhighlight %}
+</div>
+
+
+## Form Errors
+<div class="lt-example">
+
+  <form>
+
+    <div class="form-group form-group-error">
+      <label class="form-label">
+        Label
+        <input class="form-control" type="text" placeholder="Label">
+      </label>
+      <p class="form-error">This field is required.</p>
+    </div>
+
+    <div class="form-group form-group-error">
+      <label class="form-label">Label</label>
+      <input class="form-control" type="text" placeholder="Label">
+      <p class="form-error">This field is required.</p>
+    </div>
+
+  </form>
+
+  <form class="form-inline">
+
+    <div class="form-group form-group-error">
+      <label class="form-label">
+        Label
+        <input class="form-control" type="text" placeholder="Label">
+      </label>
+      <p class="form-error">This field is required.</p>
+    </div>
+
+    <div class="form-group form-group-error">
+      <label class="form-label">Label</label>
+      <input class="form-control" type="text" placeholder="Label">
+      <p class="form-error">This field is required.</p>
+    </div>
+
+  </form>
+
+</div>
+
+<div class="lt-code">
+{% highlight html %}
+<form>
+
+  <div class="form-group form-group-error">
+    <label class="form-label">
+      Label
+      <input class="form-control" type="text" placeholder="Label">
+    </label>
+    <p class="form-error">This field is required.</p>
+  </div>
+
+  <div class="form-group form-group-error">
+    <label class="form-label">Label</label>
+    <input class="form-control" type="text" placeholder="Label">
+    <p class="form-error">This field is required.</p>
   </div>
 
 </form>

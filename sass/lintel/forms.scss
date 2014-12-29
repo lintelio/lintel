@@ -30,16 +30,38 @@ $form-control-font-size:       1em !default;
 $form-control-font-weight:     normal !default;
 $form-control-line-height:     $line-height-base !default;
 
-// Focus
+// Focus State
 $form-control-focus-border:    $state-info !default;
+$form-control-focus-box-shadow:0 0 6px transparentize($form-control-focus-border, .6) !default;
 
-// Disabled
+// Disabled State
 $form-control-disabled-cursor: not-allowed !default;
 $form-control-disabled-bg:     $bg-light !default;
 $form-control-disabled-border: $border-darker !default;
 $form-control-disabled-text:   $text-dark !default;
 
-// Addons
+// Validation States
+$form-error-triangle-height:   4px;
+$form-error-triangle-width:    8px;
+$form-error-inverse-text:      #fff;
+$form-error-z-index:           $z-index-xs;
+
+$form-error-bg:                $state-error-bg;
+$form-error-border:            $state-error-border;
+$form-error-text:              $state-error-text;
+$form-error-box-shadow:        0 0 6px transparentize($form-error-border, .5) !default;
+
+$form-warning-bg:              $state-warning-bg;
+$form-warning-border:          $state-warning-border;
+$form-warning-text:            $state-warning-text;
+$form-warning-box-shadow:      0 0 6px transparentize($form-warning-border, .5) !default;
+
+$form-success-bg:              $state-success-bg;
+$form-success-border:          $state-success-border;
+$form-success-text:            $state-success-text;
+$form-success-box-shadow:      0 0 6px transparentize($form-success-border, .5) !default;
+
+// Control Addons
 $form-control-addon-bg:        $bg-light;
 
 // Checkboxes and Radios
@@ -73,6 +95,7 @@ select[size] {
 // -----------
 .form-group {
   margin-bottom: $form-group-margin-y;
+  position: relative;
 }
 
 
@@ -81,7 +104,6 @@ select[size] {
 .form-label {
   display: block;
   font-weight: $form-label-font-weight;
-  margin-bottom: $form-label-margin-y;
   max-width: 100%;
 }
 
@@ -102,7 +124,9 @@ select[size] {
   width: 100%;
 
   &:focus {
-    @extend %form-control-focus;
+    border-color: $form-control-focus-border;
+    box-shadow: $form-control-focus-box-shadow;
+    outline: 0 none;
   }
 
   &.disabled,
@@ -115,14 +139,8 @@ select[size] {
   }
 }
 
-// Focus
-%form-control-focus {
-  border-color: $form-control-focus-border;
-  box-shadow: 0 0 6px transparentize($form-control-focus-border, .6);
-  outline: 0 none;
-}
-
 // Apply margin if using label child syntax
+.form-label + .form-control,
 .form-label > .form-control,
 .form-label > .form-control-placeholder {
   margin-top: $form-label-margin-y;
@@ -278,6 +296,22 @@ textarea.form-control {
     margin-left: $form-label-margin-x;
   }
 
+  .form-error {
+    margin-left: $form-label-margin-x;
+
+    &:before {
+      @include triangle(($form-error-triangle-width, $form-error-triangle-height), $form-error-text, left);
+      bottom: auto;
+      content: '';
+      display: block;
+      margin-top: -($form-error-triangle-width / 2);
+      right: 100%;
+      position: absolute;
+      top: 50%;
+      z-index: $form-error-z-index;
+    }
+  }
+
   %radbox-label {
     display: inline-block;
     margin: 0 0 0 $form-label-margin-x;
@@ -286,4 +320,80 @@ textarea.form-control {
 
 @media screen and (min-width: $screen-md-min) {
   .form-inline { @extend %form-inline-styles; }
+}
+
+
+// Validation
+// ----------
+.form-error {
+  background: $form-error-text;
+  border-radius: $form-control-border-radius;
+  color: $form-error-inverse-text;
+  display: none;
+  font-size: $font-size-sm;
+  margin: ($form-label-margin-y + $form-error-triangle-height) 0;
+  padding: $form-control-padding-y $form-control-padding-x;
+  position: relative;
+  white-space: nowrap;
+
+  &:before {
+    @include triangle(($form-error-triangle-width, $form-error-triangle-height), $form-error-text, up);
+    bottom: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: $form-error-z-index;
+  }
+}
+
+.form-group-error {
+  color: $form-error-text;
+
+  .form-control {
+    background-color: $form-error-bg;
+    border-color: $form-error-border;
+
+    &:focus {
+      box-shadow: $form-error-box-shadow;
+    }
+  }
+
+  .form-error {
+    display: inline-block;
+  }
+}
+
+.form-group-warning {
+  color: $form-warning-text;
+
+  .form-control {
+    background-color: $form-warning-bg;
+    border-color: $form-warning-border;
+
+    &:focus {
+      box-shadow: $form-warning-box-shadow;
+    }
+  }
+}
+
+.form-group-success {
+  color: $form-success-text;
+
+  .form-control {
+    background-color: $form-success-bg;
+    border-color: $form-success-border;
+
+    &:focus {
+      box-shadow: $form-success-box-shadow;
+    }
+  }
+}
+
+
+.form-group-error,
+.form-group-warning,
+.form-group-success {
+  .form-help {
+    color: inherit;
+  }
 }

@@ -24,7 +24,7 @@ $state-warning-text:    darken($state-warning, 20%) !default;
 $state-warning-border:  desaturate(lighten($state-warning, 15%), 30%) !default;
 
 $state-success-bg:      desaturate(lighten($state-success, 55%), 15%) !default;
-$state-success-text:    darken($state-success, 10%) !default;
+$state-success-text:    darken($state-success, 5%) !default;
 $state-success-border:  desaturate(lighten($state-success, 30%), 25%) !default;
 
 $state-info-bg:         desaturate(lighten($state-info, 35%), 5%) !default;
@@ -228,6 +228,19 @@ $screen-sm-min:         480px !default;
 $screen-sm-max:         ($screen-md-min - 1) !default;
 
 $screen-xs-max:         ($screen-sm-min - 1) !default;
+
+
+// Z-Index
+// -------
+$z-index-3xl:           1400;
+$z-index-2xl:           1300;
+$z-index-xl:            1200;
+$z-index-lg:            1100;
+$z-index-md:            1000;
+$z-index-sm:            900;
+$z-index-xs:            800;
+$z-index-2xs:           700;
+$z-index-3xs:           600;
 
 
 // Durations
