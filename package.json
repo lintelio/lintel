@@ -23,6 +23,9 @@
     "/.*",
     "CNAME"
   ],
+  "scripts": {
+    "test": "grunt test"
+  },
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.5",
