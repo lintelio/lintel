@@ -44,7 +44,7 @@ select[multiple], select[size] {
   box-shadow: 0 0 6px rgba(89, 171, 227, 0.4);
   outline: 0 none; }
 
-.form-label > .form-control {
+.form-label > .form-control, .form-label > .form-control-placeholder {
   margin-top: 5px; }
 
 .form-control-placeholder {
@@ -53,6 +53,7 @@ select[multiple], select[size] {
   font-size: 1em;
   font-weight: normal;
   height: 34px;
+  line-height: 34px;
   padding: 5px 0; }
 
 textarea.form-control {
@@ -78,6 +79,37 @@ textarea.form-control {
   color: #868686;
   margin: 5px 0; }
 
+.form-control-group {
+  border-collapse: seprate;
+  display: table;
+  position: relative; }
+  .form-control-group .form-control:first-child, .form-control-group .form-control-addon:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+  .form-control-group .form-control:not(:first-child):not(:last-child), .form-control-group .form-control-addon:not(:first-child):not(:last-child) {
+    border-radius: 0; }
+  .form-control-group .form-control:last-child, .form-control-group .form-control-addon:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+  .form-control-group .form-control-addon:first-child {
+    border-right: 0; }
+  .form-control-group .form-control-addon:last-child {
+    border-left: 0; }
+
+.form-control-addon {
+  background-color: #fbfbfb;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  color: #333333;
+  display: table-cell;
+  font-size: 1em;
+  line-height: 1;
+  padding: 5px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 1%; }
+
 .form-inline .form-group {
   display: inline-block;
   margin-bottom: 0;
@@ -87,9 +119,9 @@ textarea.form-control {
   margin-bottom: 0; }
 .form-inline .form-control {
   margin-left: 8px; }
-.form-inline .visible-sr + .form-control {
+.form-inline .visible-sr + .form-control, .form-inline .form-control-group > .form-control {
   margin-left: 0; }
-.form-inline .form-control {
+.form-inline .form-control, .form-inline .form-control-placeholder {
   display: inline-block;
   margin-top: 0;
   width: auto; }

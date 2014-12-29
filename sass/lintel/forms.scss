@@ -1,43 +1,51 @@
 // Variables
 // ---------
-$form-group-margin-y:       $cushion-y-xl !default;
-$form-group-margin-x:       $form-group-margin-y !default;
+$form-group-margin-y:          $cushion-y-xl !default;
+$form-group-margin-x:          $form-group-margin-y !default;
 
-$label-font-weight:         bold !default;
-$label-margin-y:            $cushion-y-xs !default;
-$label-margin-x:            $cushion-x-xs !default;
+// Label
+$form-label-font-weight:       bold !default;
 
-$input-bg:                  #fff !default;
-$input-border:              $border-darkest !default;
-$input-border-radius:       $border-radius-base !default;
-$input-color:               $text-base !default;
+$form-label-margin-y:          $cushion-y-xs !default;
+$form-label-margin-x:          $cushion-x-xs !default;
 
-$input-font-size:           1em !default;
-$input-font-weight:         normal !default;
-$input-line-height:         $line-height-base !default;
+// Control
+$form-control-bg:              #fff !default;
+$form-control-border:          $border-darkest !default;
+$form-control-border-radius:   $border-radius-base !default;
+$form-control-text:            $text-base !default;
 
-$input-padding-y:           $cushion-y-xs  !default;
-$input-padding-x:           $cushion-x-md !default;
+// Control Size
+$form-control-height-lg:       38px !default;
+$form-control-height-md:       34px !default;
+$form-control-height-sm:       30px !default;
 
-$input-height-lg:           38px !default;
-$input-height-md:           34px !default;
-$input-height-sm:           30px !default;
+$form-control-height-base:     $form-control-height-md !default;
 
-$input-height-base:         $input-height-md !default;
+$form-control-padding-y:       $cushion-y-xs  !default;
+$form-control-padding-x:       $cushion-x-md !default;
+
+// Control Typography
+$form-control-font-size:       1em !default;
+$form-control-font-weight:     normal !default;
+$form-control-line-height:     $line-height-base !default;
 
 // Focus
-$input-focus-border:        $state-info !default;
+$form-control-focus-border:    $state-info !default;
 
 // Disabled
-$input-disabled-cursor:     not-allowed !default;
-$input-disabled-bg:         $bg-light !default;
-$input-disabled-border:     $border-darker !default;
-$input-disabled-text:       $text-dark !default;
+$form-control-disabled-cursor: not-allowed !default;
+$form-control-disabled-bg:     $bg-light !default;
+$form-control-disabled-border: $border-darker !default;
+$form-control-disabled-text:   $text-dark !default;
+
+// Addons
+$form-control-addon-bg:        $bg-light;
 
 // Checkboxes and Radios
-$checkbox-margin-y:         5px !default;
-$checkbox-adjust-y:         3px !default;
-$checkbox-width:            20px !default;
+$form-checkbox-margin-y:       5px !default;
+$form-checkbox-adjust-y:       3px !default;
+$form-checkbox-width:          20px !default;
 
 // Base Styles
 // -----------
@@ -72,8 +80,8 @@ select[size] {
 // -----
 .form-label {
   display: block;
-  font-weight: $label-font-weight;
-  margin-bottom: $label-margin-y;
+  font-weight: $form-label-font-weight;
+  margin-bottom: $form-label-margin-y;
   max-width: 100%;
 }
 
@@ -81,16 +89,16 @@ select[size] {
 // Form controls
 // -------------
 .form-control {
-  background: $input-bg;
-  border: 1px solid $input-border;
-  border-radius: $input-border-radius;
-  color: $input-color;
+  background: $form-control-bg;
+  border: 1px solid $form-control-border;
+  border-radius: $form-control-border-radius;
+  color: $form-control-text;
   display: block;
-  font-size: $input-font-size;
-  font-weight: $input-font-weight;
-  height: $input-height-base;
-  line-height: $input-line-height;
-  padding: $input-padding-y $input-padding-x;
+  font-size: $form-control-font-size;
+  font-weight: $form-control-font-weight;
+  height: $form-control-height-base;
+  line-height: $form-control-line-height;
+  padding: $form-control-padding-y $form-control-padding-x;
   width: 100%;
 
   &:focus {
@@ -100,33 +108,35 @@ select[size] {
   &.disabled,
   &[disabled],
   &[readonly] {
-    background-color: $input-disabled-bg;
-    border-color: $input-disabled-border;
-    color: $input-disabled-text;
-    cursor: $input-disabled-cursor;
+    background-color: $form-control-disabled-bg;
+    border-color: $form-control-disabled-border;
+    color: $form-control-disabled-text;
+    cursor: $form-control-disabled-cursor;
   }
 }
 
 // Focus
 %form-control-focus {
-  border-color: $input-focus-border;
-  box-shadow: 0 0 6px transparentize($input-focus-border, .6);
+  border-color: $form-control-focus-border;
+  box-shadow: 0 0 6px transparentize($form-control-focus-border, .6);
   outline: 0 none;
 }
 
 // Apply margin if using label child syntax
-.form-label > .form-control {
-  margin-top: $label-margin-y;
+.form-label > .form-control,
+.form-label > .form-control-placeholder {
+  margin-top: $form-label-margin-y;
 }
 
 // Placeholder
 .form-control-placeholder {
-  color: $input-color;
+  color: $form-control-text;
   display: block;
-  font-size: $input-font-size;
-  font-weight: $input-font-weight;
-  height: $input-height-base;
-  padding: $input-padding-y 0;
+  font-size: $form-control-font-size;
+  font-weight: $form-control-font-weight;
+  height: $form-control-height-base;
+  line-height: $form-control-height-base;
+  padding: $form-control-padding-y 0;
 }
 
 // Textarea
@@ -137,17 +147,17 @@ textarea.form-control {
 
 // Checkboxes and Radios
 // ---------------------
-%radbox-label {
+%radbox-label { // parent
   display: block;
-  padding-left: $checkbox-width;
+  padding-left: $form-checkbox-width;
   position: relative;
-  margin: $checkbox-margin-y 0;
+  margin: $form-checkbox-margin-y 0;
 }
 
-%radbox {
+%radbox { // input
   line-height: normal;
-  margin-top: $checkbox-adjust-y;
-  margin-left: -$checkbox-width;
+  margin-top: $form-checkbox-adjust-y;
+  margin-left: -$form-checkbox-width;
   position: absolute;
 }
 
@@ -160,7 +170,7 @@ textarea.form-control {
 .form-radio-inline {
   @extend %radbox-label;
   display: inline-block;
-  margin-right: $label-margin-x;
+  margin-right: $form-label-margin-x;
 }
 
 .form-checkbox > input[type="checkbox"],
@@ -178,7 +188,58 @@ textarea.form-control {
 // ---------
 .form-help {
   color: $text-muted;
-  margin: $label-margin-y 0;
+  margin: $form-label-margin-y 0;
+}
+
+
+// Addons
+// ------
+.form-control-group {
+  border-collapse: seprate;
+  display: table;
+  position: relative;
+
+  .form-control,
+  .form-control-addon {
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  .form-control-addon {
+    &:first-child {
+      border-right: 0;
+    }
+
+    &:last-child {
+      border-left: 0;
+    }
+  }
+}
+
+.form-control-addon {
+  background-color: $form-control-addon-bg;
+  border: 1px solid $form-control-border;
+  border-radius: $form-control-border-radius;
+  color: $form-control-text;
+  display: table-cell;
+  font-size: $form-control-font-size;
+  line-height: 1;
+  padding: $form-control-padding-y $form-control-padding-x;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 1%;
 }
 
 
@@ -188,7 +249,7 @@ textarea.form-control {
   .form-group {
     display: inline-block;
     margin-bottom: 0;
-    margin-right: $label-margin-x;
+    margin-right: $form-label-margin-x;
   }
 
   .form-label {
@@ -197,14 +258,16 @@ textarea.form-control {
   }
 
   .form-control {
-    margin-left: $label-margin-x;
+    margin-left: $form-label-margin-x;
   }
 
-  .visible-sr + .form-control {
+  .visible-sr + .form-control,
+  .form-control-group > .form-control {
     margin-left: 0;
   }
 
-  .form-control {
+  .form-control,
+  .form-control-placeholder {
     display: inline-block;
     margin-top: 0;
     width: auto;
@@ -212,12 +275,12 @@ textarea.form-control {
 
   .form-help {
     display: inline-block;
-    margin-left: $label-margin-x;
+    margin-left: $form-label-margin-x;
   }
 
   %radbox-label {
     display: inline-block;
-    margin: 0 0 0 $label-margin-x;
+    margin: 0 0 0 $form-label-margin-x;
   }
 }
 
