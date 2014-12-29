@@ -79,11 +79,13 @@ categories: ["examples", "core", "forms"]
 {% highlight html %}
 <form>
 
+  <!-- Sibling Syntax -->
   <div class="form-group">
     <label class="form-label">Label</label>
     <input class="form-control" type="text" placeholder="Label">
   </div>
 
+  <!-- Child Syntax (Recommended) -->
   <div class="form-group">
     <label class="form-label">
       Label (child)
@@ -91,16 +93,26 @@ categories: ["examples", "core", "forms"]
     </label>
   </div>
 
+  <!-- Select Sibling Syntax -->
   <div class="form-group">
     <label class="form-label">Label</label>
-    <input class="form-control" type="text" placeholder="Label">
+    <select class="form-control">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+    </select>
     <p class="form-help">Help text.</p>
   </div>
 
+  <!-- Select Child Syntax (Recommended) -->
   <div class="form-group">
     <label class="form-label">
       Label (child)
-      <input class="form-control" type="text" placeholder="Label">
+      <select class="form-control">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
     </label>
     <p class="form-help">Help text.</p>
   </div>
@@ -111,6 +123,7 @@ categories: ["examples", "core", "forms"]
     </label>
   </div>
 
+  <!-- Block checkboxes -->
   <div class="form-group">
     <span class="form-label">Checkboxes</span>
     <label class="form-checkbox">
@@ -121,6 +134,7 @@ categories: ["examples", "core", "forms"]
     </label>
   </div>
 
+  <!-- Inline Radios -->
   <div class="form-group">
     <span class="form-label">Radio Buttons</span>
     <label class="form-radio-inline">
@@ -308,6 +322,7 @@ categories: ["examples", "core", "forms"]
 
 <div class="lt-code">
 {% highlight html %}
+<!-- Sibling Syntax -->
 <div class="form-group">
   <label class="visible-sr">Amount</label>
   <div class="form-control-group">
@@ -317,8 +332,7 @@ categories: ["examples", "core", "forms"]
   </div>
 </div>
 
-<!-- OR -->
-
+<!-- Child Syntax -->
 <div class="form-group">
   <label>
     <span class="visible-sr">Amount</span>
@@ -340,12 +354,60 @@ categories: ["examples", "core", "forms"]
 See MDN <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a> article for full list.
 
 <div class="lt-example">
-  <input type="text" class="form-control" placeholder="Text input">
+  <input class="form-control" type="text" placeholder="Text input">
 </div>
 
 <div class="lt-code">
 {% highlight html %}
-<input type="text" class="form-control" placeholder="Text input">
+<input class="form-control" type="text" placeholder="Text input">
+{% endhighlight %}
+</div>
+
+#### Input Sizes
+<div class="lt-example">
+  <div class="form-group form-group-lg">
+    <label class="form-label">
+      Large
+      <div class="form-control-group">
+        <div class="form-control-addon">$</div>
+        <input class="form-control" type="number" placeholder="Amount">
+        <div class="form-control-addon">.00</div>
+      </div>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="form-label">
+      Base
+      <input class="form-control" type="text" placeholder="Text input">
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="form-label">
+      Small
+      <input class="form-control form-control-sm" type="text" placeholder="Text input">
+    </label>
+  </div>
+</div>
+
+<div class="lt-code">
+{% highlight html %}
+<!-- Form Group Syntax -->
+<div class="form-group form-group-lg">
+  <label class="form-label">
+    Large
+    <div class="form-control-group">
+      <div class="form-control-addon">$</div>
+      <input class="form-control" type="number" placeholder="Amount">
+      <div class="form-control-addon">.00</div>
+    </div>
+  </label>
+</div>
+
+<!-- Base -->
+<input class="form-control" type="text" placeholder="Text input">
+
+<!-- Form Control Syntax -->
+<input class="form-control form-control-sm" type="text" placeholder="Text input">
 {% endhighlight %}
 </div>
 
@@ -382,7 +444,7 @@ See MDN <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
 
 #### Focus state
 <div class="lt-example">
-  <input type="text" class="form-control lt-form-control-focused" placeholder="Text input">
+  <input class="form-control lt-form-control-focused" type="text" placeholder="Text input">
 </div>
 
 #### Disabled state

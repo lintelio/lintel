@@ -1,73 +1,76 @@
 // Variables
 // ---------
-$form-group-margin-y:          $cushion-y-xl !default;
-$form-group-margin-x:          $form-group-margin-y !default;
+$form-group-margin-y:           $cushion-y-xl !default;
+$form-group-margin-x:           $form-group-margin-y !default;
 
 // Label
-$form-label-font-weight:       bold !default;
+$form-label-font-weight:        bold !default;
+$form-label-margin-y:           $cushion-y-xs !default;
+$form-label-margin-x:           $cushion-x-xs !default;
 
-$form-label-margin-y:          $cushion-y-xs !default;
-$form-label-margin-x:          $cushion-x-xs !default;
-
-// Control
-$form-control-bg:              #fff !default;
-$form-control-border:          $border-darkest !default;
-$form-control-border-radius:   $border-radius-base !default;
-$form-control-text:            $text-base !default;
+// Control Style
+$form-control-bg:               #fff !default;
+$form-control-border:           $border-darkest !default;
+$form-control-border-radius:    $border-radius-base !default;
+$form-control-text:             $text-base !default;
 
 // Control Size
-$form-control-height-lg:       38px !default;
-$form-control-height-md:       34px !default;
-$form-control-height-sm:       30px !default;
+$form-control-height-lg:        42px !default;
+$form-control-height-md:        34px !default;
+$form-control-height-sm:        28px !default;
+$form-control-height-base:      $form-control-height-md !default;
 
-$form-control-height-base:     $form-control-height-md !default;
-
-$form-control-padding-y:       $cushion-y-xs  !default;
-$form-control-padding-x:       $cushion-x-md !default;
+$form-control-padding-y:        $cushion-y-xs  !default;
+$form-control-padding-x:        $cushion-x-md !default;
 
 // Control Typography
-$form-control-font-size:       1em !default;
-$form-control-font-weight:     normal !default;
-$form-control-line-height:     $line-height-base !default;
+$form-control-font-size-lg:     1.2em !default;
+$form-control-font-size-md:     1em !default;
+$form-control-font-size-sm:     0.85em !default;
+$form-control-font-size-base:   $form-control-font-size-md;
+
+$form-control-font-weight:      normal !default;
+$form-control-line-height:      $line-height-base !default;
 
 // Focus State
-$form-control-focus-border:    $state-info !default;
-$form-control-focus-box-shadow:0 0 6px transparentize($form-control-focus-border, .6) !default;
+$form-control-focus-bg:         $form-control-bg !default;
+$form-control-focus-border:     $state-info !default;
+$form-control-focus-box-shadow: 0 0 6px transparentize($form-control-focus-border, .6) !default;
 
 // Disabled State
-$form-control-disabled-cursor: not-allowed !default;
-$form-control-disabled-bg:     $bg-light !default;
-$form-control-disabled-border: $border-darker !default;
-$form-control-disabled-text:   $text-dark !default;
+$form-control-disabled-bg:      $bg-light !default;
+$form-control-disabled-border:  $border-darker !default;
+$form-control-disabled-cursor:  not-allowed !default;
+$form-control-disabled-text:    $text-dark !default;
 
 // Validation States
-$form-error-triangle-height:   4px;
-$form-error-triangle-width:    8px;
-$form-error-inverse-text:      #fff;
-$form-error-z-index:           $z-index-xs;
+$form-error-triangle-height:    4px;
+$form-error-triangle-width:     8px;
+$form-error-inverse-text:       #fff;
+$form-error-z-index:            $z-index-xs;
 
-$form-error-bg:                $state-error-bg;
-$form-error-border:            $state-error-border;
-$form-error-text:              $state-error-text;
-$form-error-box-shadow:        0 0 6px transparentize($form-error-border, .5) !default;
+$form-error-bg:                 $state-error-bg;
+$form-error-border:             $state-error-border;
+$form-error-text:               $state-error-text;
+$form-error-box-shadow:         0 0 6px transparentize($form-error-border, .5) !default;
 
-$form-warning-bg:              $state-warning-bg;
-$form-warning-border:          $state-warning-border;
-$form-warning-text:            $state-warning-text;
-$form-warning-box-shadow:      0 0 6px transparentize($form-warning-border, .5) !default;
+$form-warning-bg:               $state-warning-bg;
+$form-warning-border:           $state-warning-border;
+$form-warning-text:             $state-warning-text;
+$form-warning-box-shadow:       0 0 6px transparentize($form-warning-border, .5) !default;
 
-$form-success-bg:              $state-success-bg;
-$form-success-border:          $state-success-border;
-$form-success-text:            $state-success-text;
-$form-success-box-shadow:      0 0 6px transparentize($form-success-border, .5) !default;
+$form-success-bg:               $state-success-bg;
+$form-success-border:           $state-success-border;
+$form-success-text:             $state-success-text;
+$form-success-box-shadow:       0 0 6px transparentize($form-success-border, .5) !default;
 
 // Control Addons
-$form-control-addon-bg:        $bg-light;
+$form-control-addon-bg:         $bg-light;
 
 // Checkboxes and Radios
-$form-checkbox-margin-y:       5px !default;
-$form-checkbox-adjust-y:       3px !default;
-$form-checkbox-width:          20px !default;
+$form-checkbox-margin-y:        5px !default;
+$form-checkbox-adjust-y:        3px !default;
+$form-checkbox-width:           20px !default;
 
 // Base Styles
 // -----------
@@ -98,6 +101,20 @@ select[size] {
   position: relative;
 }
 
+.form-group-lg {
+  .form-control,
+  .form-control-addon {
+    @extend .form-control-lg;
+  }
+}
+
+.form-group-sm {
+  .form-control,
+  .form-control-addon {
+    @extend .form-control-sm;
+  }
+}
+
 
 // Label
 // -----
@@ -105,6 +122,14 @@ select[size] {
   display: block;
   font-weight: $form-label-font-weight;
   max-width: 100%;
+}
+
+// Apply margin if using label child syntax
+.form-label + .form-control,
+.form-label > .form-control,
+.form-label > .form-control-placeholder,
+.form-label > .form-control-group {
+  margin-top: $form-label-margin-y;
 }
 
 
@@ -116,7 +141,7 @@ select[size] {
   border-radius: $form-control-border-radius;
   color: $form-control-text;
   display: block;
-  font-size: $form-control-font-size;
+  font-size: $form-control-font-size-base;
   font-weight: $form-control-font-weight;
   height: $form-control-height-base;
   line-height: $form-control-line-height;
@@ -124,6 +149,7 @@ select[size] {
   width: 100%;
 
   &:focus {
+    background: $form-control-focus-bg;
     border-color: $form-control-focus-border;
     box-shadow: $form-control-focus-box-shadow;
     outline: 0 none;
@@ -139,27 +165,31 @@ select[size] {
   }
 }
 
-// Apply margin if using label child syntax
-.form-label + .form-control,
-.form-label > .form-control,
-.form-label > .form-control-placeholder {
-  margin-top: $form-label-margin-y;
+// Sizes
+.form-control-lg {
+  font-size: $form-control-font-size-lg;
+  height: $form-control-height-lg;
+}
+
+.form-control-sm {
+  font-size: $form-control-font-size-sm;
+  height: $form-control-height-sm;
+}
+
+// Textarea
+textarea.form-control {
+  height: auto;
 }
 
 // Placeholder
 .form-control-placeholder {
   color: $form-control-text;
   display: block;
-  font-size: $form-control-font-size;
+  font-size: $form-control-font-size-base;
   font-weight: $form-control-font-weight;
   height: $form-control-height-base;
   line-height: $form-control-height-base;
   padding: $form-control-padding-y 0;
-}
-
-// Textarea
-textarea.form-control {
-  height: auto;
 }
 
 
@@ -251,7 +281,8 @@ textarea.form-control {
   border-radius: $form-control-border-radius;
   color: $form-control-text;
   display: table-cell;
-  font-size: $form-control-font-size;
+  font-size: inherit;
+  font-weight: normal;
   line-height: 1;
   padding: $form-control-padding-y $form-control-padding-x;
   text-align: center;

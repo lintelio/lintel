@@ -21,6 +21,9 @@ select[multiple], select[size] {
   font-weight: bold;
   max-width: 100%; }
 
+.form-label + .form-control, .form-label > .form-control, .form-label > .form-control-placeholder, .form-label > .form-control-group {
+  margin-top: 5px; }
+
 .form-control {
   background: #fff;
   border: 1px solid #cccccc;
@@ -34,6 +37,7 @@ select[multiple], select[size] {
   padding: 5px 12px;
   width: 100%; }
   .form-control:focus {
+    background: #fff;
     border-color: #59abe3;
     box-shadow: 0 0 6px rgba(89, 171, 227, 0.4);
     outline: 0 none; }
@@ -43,8 +47,16 @@ select[multiple], select[size] {
     color: #333333;
     cursor: not-allowed; }
 
-.form-label + .form-control, .form-label > .form-control, .form-label > .form-control-placeholder {
-  margin-top: 5px; }
+.form-control-lg, .form-group-lg .form-control, .form-group-lg .form-control-addon {
+  font-size: 1.2em;
+  height: 42px; }
+
+.form-control-sm, .form-group-sm .form-control, .form-group-sm .form-control-addon {
+  font-size: 0.85em;
+  height: 28px; }
+
+textarea.form-control {
+  height: auto; }
 
 .form-control-placeholder {
   color: #333333;
@@ -54,9 +66,6 @@ select[multiple], select[size] {
   height: 34px;
   line-height: 34px;
   padding: 5px 0; }
-
-textarea.form-control {
-  height: auto; }
 
 .form-checkbox, .form-radio, .form-checkbox-inline, .form-radio-inline {
   display: block;
@@ -101,7 +110,8 @@ textarea.form-control {
   border-radius: 4px;
   color: #333333;
   display: table-cell;
-  font-size: 1em;
+  font-size: inherit;
+  font-weight: normal;
   line-height: 1;
   padding: 5px 12px;
   text-align: center;
