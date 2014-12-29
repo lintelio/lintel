@@ -1,6 +1,8 @@
 Lintel
 ======
 
+[![Circle CI](https://circleci.com/gh/lintelio/lintel.svg?style=shield&circle-token=4e7638ed20ea1fad8670cb4482b05c186c5e53d3)](https://circleci.com/gh/lintelio/lintel)
+
 Lintel aims to be the next generation CSS framework for scalable applications.
 
 
