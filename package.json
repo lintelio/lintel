@@ -1,13 +1,20 @@
 {
   "name": "lintel",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Modular CSS framework for scalable applications.",
   "homepage": "http://lintel.io",
-  "repository": "git@github.com:lintelio/lintel.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lintelio/lintel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lintelio/lintel/issues"
+  },
   "author": {
     "name": "Marius Craciunoiu",
     "url": "www.mariusc23.com"
   },
+  "license": "MIT",
   "keywords": [
     "css",
     "sass",
