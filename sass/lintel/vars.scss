@@ -229,6 +229,26 @@ $screen-sm-max:         ($screen-md-min - 1) !default;
 
 $screen-xs-max:         ($screen-sm-min - 1) !default;
 
+$screen-min-map:        (
+                          "sm": $screen-sm-min,
+                          "md": $screen-md-min,
+                          "lg": $screen-lg-min,
+                          "xl": $screen-xl-min,
+                          "2xl": $screen-2xl-min,
+                          "3xl": $screen-3xl-min,
+                          "max": $screen-max-min
+                        );
+
+$screen-max-map:        (
+                          "xs": $screen-xs-max,
+                          "sm": $screen-sm-max,
+                          "md": $screen-md-max,
+                          "lg": $screen-lg-max,
+                          "xl": $screen-xl-max,
+                          "2xl": $screen-2xl-max,
+                          "3xl": $screen-3xl-max
+                        );
+
 
 // Z-Index
 // -------
