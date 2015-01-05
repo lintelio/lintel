@@ -1,11 +1,6 @@
 @import 'lintel';
 @import 'highlight';
 
-// TODO: move to lintel core
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
 // Article
 // -------
 .lt-article {
