@@ -53,7 +53,7 @@ $border-radius-lg:      6px !default;
 $border-radius-md:      4px !default;
 $border-radius-sm:      2px !default;
 
-$border-radius-base:    $border-radius-md;
+$border-radius-base:    $border-radius-md !default;
 
 // Backgrounds
 $bg-base:               #f6f6f6 !default;
@@ -87,11 +87,11 @@ $box-shadow-dark:       0 1px 3px rgba(0, 0, 0, 0.15) !default;
 // ----------
 $font-size-base:            14px !default;
 
-$font-size-xl:              125%; // ceil($font-size-base * 1.25) !default;
-$font-size-lg:              8 / 7 * 100%; // ceil($font-size-base * 8 / 7) !default;
-$font-size-md:              $font-size-base;
-$font-size-sm:              90%;
-$font-size-xs:              80%;
+$font-size-xl:              125% !default; // ceil($font-size-base * 1.25) !default;
+$font-size-lg:              8 / 7 * 100% !default; // ceil($font-size-base * 8 / 7) !default;
+$font-size-md:              $font-size-base !default;
+$font-size-sm:              90% !default;
+$font-size-xs:              80% !default;
 
 $font-size-h1:              36px !default;
 $font-size-h2:              30px !default;
@@ -111,7 +111,7 @@ $font-family-headings:      $font-family-sans-serif !default;
 // Line Height
 $line-height-computed:      20px !default;
 $line-height-base:          strip-unit($line-height-computed / $font-size-base) !default;
-$line-height-headings:      1.4;
+$line-height-headings:      1.4 !default;
 
 // Font Weights
 $font-weight-headings:      700 !default;
@@ -122,36 +122,36 @@ $blockquote-border-size:    4px !default;
 $blockquote-bg:             transparent !default;
 
 // Code
-$code-cushion-y:            2px;
-$code-cushion-x:            4px;
+$code-cushion-y:            2px !default;
+$code-cushion-x:            4px !default;
 
-$code-font-size:            $font-size-sm;
+$code-font-size:            $font-size-sm !default;
 
-$code-bg:                   $bg-base;
-$code-text:                 $text-base;
+$code-bg:                   $bg-base !default;
+$code-text:                 $text-base !default;
 
 // Pre
-$pre-bg:                    $code-bg;
-$pre-border:                $border-base;
-$pre-text:                  $code-text;
+$pre-bg:                    $code-bg !default;
+$pre-border:                $border-base !default;
+$pre-text:                  $code-text !default;
 
 // Keyboard Input
-$kbd-cushion-y:             $code-cushion-y;
-$kbd-cushion-x:             8px;
+$kbd-cushion-y:             $code-cushion-y !default;
+$kbd-cushion-x:             8px !default;
 
-$kbd-bg:                    $text-darkest;
-$kbd-text:                  $text-lightest;
+$kbd-bg:                    $text-darkest !default;
+$kbd-text:                  $text-lightest !default;
 
 
 // Spacing
 // -------
 $cushion-base:          20px !default;
 
-$cushion-xl:            16px;
-$cushion-lg:            12px;
-$cushion-md:            10px;
-$cushion-sm:            8px;
-$cushion-xs:            5px;
+$cushion-xl:            16px !default;
+$cushion-lg:            12px !default;
+$cushion-md:            10px !default;
+$cushion-sm:            8px !default;
+$cushion-xs:            5px !default;
 
 $cushion-y-2xl:         $cushion-base !default;
 $cushion-x-2xl:         $cushion-base + $cushion-md !default;
@@ -193,16 +193,16 @@ $cushion-x-xs:          $cushion-sm !default;
 // Sizes
 // -----
 // Thumbnails
-$thumb-3xs:             32px;
-$thumb-2xs:             40px;
-$thumb-xs:              60px;
-$thumb-sm:              100px;
-$thumb-md:              130px;
-$thumb-lg:              200px;
-$thumb-xl:              250px;
-$thumb-2xl:             300px;
+$thumb-3xs:             32px !default;
+$thumb-2xs:             40px !default;
+$thumb-xs:              60px !default;
+$thumb-sm:              100px !default;
+$thumb-md:              130px !default;
+$thumb-lg:              200px !default;
+$thumb-xl:              250px !default;
+$thumb-2xl:             300px !default;
 
-$thumb-base:            $thumb-sm;
+$thumb-base:            $thumb-sm !default;
 
 
 // Breakpoints
@@ -237,7 +237,7 @@ $screen-min-map:        (
                           "2xl": $screen-2xl-min,
                           "3xl": $screen-3xl-min,
                           "max": $screen-max-min
-                        );
+                        ) !default;
 
 $screen-max-map:        (
                           "xs": $screen-xs-max,
@@ -247,20 +247,20 @@ $screen-max-map:        (
                           "xl": $screen-xl-max,
                           "2xl": $screen-2xl-max,
                           "3xl": $screen-3xl-max
-                        );
+                        ) !default;
 
 
 // Z-Index
 // -------
-$z-index-3xl:           1400;
-$z-index-2xl:           1300;
-$z-index-xl:            1200;
-$z-index-lg:            1100;
-$z-index-md:            1000;
-$z-index-sm:            900;
-$z-index-xs:            800;
-$z-index-2xs:           700;
-$z-index-3xs:           600;
+$z-index-3xl:           1400 !default;
+$z-index-2xl:           1300 !default;
+$z-index-xl:            1200 !default;
+$z-index-lg:            1100 !default;
+$z-index-md:            1000 !default;
+$z-index-sm:            900 !default;
+$z-index-xs:            800 !default;
+$z-index-2xs:           700 !default;
+$z-index-3xs:           600 !default;
 
 
 // Durations
