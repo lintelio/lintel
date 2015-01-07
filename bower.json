@@ -1,6 +1,6 @@
 {
   "name": "lintel",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Modular CSS framework for scalable applications.",
   "homepage": "http://lintel.io",
   "repository": {
@@ -10,10 +10,12 @@
   "bugs": {
     "url": "https://github.com/lintelio/lintel/issues"
   },
-  "authors": [{
-    "name": "Marius Craciunoiu",
-    "homepage": "www.mariusc23.com"
-  }],
+  "authors": [
+    {
+      "name": "Marius Craciunoiu",
+      "homepage": "www.mariusc23.com"
+    }
+  ],
   "license": "MIT",
   "keywords": [
     "css",
@@ -32,8 +34,8 @@
     "CNAME",
     "CONTRIBUTING.md"
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "holderjs": "~2.4.1"
   }
 }

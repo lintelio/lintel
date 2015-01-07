@@ -117,7 +117,8 @@ module.exports = function (grunt) {
         options: {
           base: [
             '<%= lintel.dist %>',
-            '<%= lintel.docsCompiled %>'
+            '<%= lintel.docsCompiled %>',
+            'bower_components',
           ],
           livereload: true,
           port: 4000

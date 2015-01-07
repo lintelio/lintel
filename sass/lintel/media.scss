@@ -1,0 +1,63 @@
+// Base
+// ----
+.media {
+  margin-top: $media-margin-top;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+
+// Body
+// ----
+.media,
+.media-body {
+  zoom: 1;
+  overflow: hidden;
+}
+
+.media-body {
+  width: 10000px;
+}
+
+
+// Media Object
+// ------------
+.media-object {
+  display: block;
+}
+
+// Positioning
+.media-right,
+.media > .float-right {
+  padding-left: 10px;
+}
+
+.media-left,
+.media > .float-left {
+  padding-right: 10px;
+}
+
+.media-left,
+.media-right,
+.media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.media-middle {
+  vertical-align: middle;
+}
+
+.media-bottom {
+  vertical-align: bottom;
+}
+
+
+// Media Heading
+// -------------
+.media-heading {
+  margin-top: 0;
+  margin-bottom: $media-heading-margin-bottom;
+}

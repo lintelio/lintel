@@ -2,7 +2,7 @@ Lintel
 ======
 
 [![Circle CI](https://circleci.com/gh/lintelio/lintel.svg?style=shield&circle-token=4e7638ed20ea1fad8670cb4482b05c186c5e53d3)](https://circleci.com/gh/lintelio/lintel)
-[![npm](https://img.shields.io/npm/v/lintel.svg)](https://github.com/lintelio/lintel)
+[![npm](https://img.shields.io/npm/v/lintel.svg)](https://www.npmjs.com/package/lintel)
 [![Bower](https://img.shields.io/bower/v/lintel.svg)](https://github.com/lintelio/lintel)
 
 

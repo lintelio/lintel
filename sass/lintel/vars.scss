@@ -171,24 +171,6 @@ $cushion-x-sm:          $cushion-md !default;
 $cushion-y-xs:          $cushion-xs !default;
 $cushion-x-xs:          $cushion-sm !default;
 
-// $cushion-y-2xl:         $cushion-base !default;
-// $cushion-x-2xl:         $cushion-base + $cushion-xs !default;
-
-// $cushion-y-xl:          $cushion-xl !default;
-// $cushion-x-xl:          $cushion-base !default;
-
-// $cushion-y-lg:          $cushion-lg !default;
-// $cushion-x-lg:          $cushion-xl !default;
-
-// $cushion-y-md:          $cushion-sm !default;  // base
-// $cushion-x-md:          $cushion-lg !default; // base
-
-// $cushion-y-sm:          $cushion-2xs !default;
-// $cushion-x-sm:          $cushion-md !default;
-
-// $cushion-y-xs:          1px !default;
-// $cushion-x-xs:          $cushion-2xs !default;
-
 
 // Sizes
 // -----
@@ -203,6 +185,12 @@ $thumb-xl:              250px !default;
 $thumb-2xl:             300px !default;
 
 $thumb-base:            $thumb-sm !default;
+
+
+// Media Object
+// ------------
+$media-margin-top:              $cushion-y-md !default;
+$media-heading-margin-bottom:   $cushion-y-md !default;
 
 
 // Breakpoints
