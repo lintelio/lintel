@@ -99,6 +99,7 @@
 }
 
 // Visible responsive
+@include visible(max, $screen-max-min);
 @include visible(3xl, $screen-3xl-min, $screen-3xl-max);
 @include visible(2xl, $screen-2xl-min, $screen-2xl-max);
 @include visible(xl,  $screen-xl-min, $screen-xl-max);
@@ -114,6 +115,7 @@
 }
 
 // Hidden responsive
+@include hidden(max, $screen-max-min);
 @include hidden(3xl, $screen-3xl-min, $screen-3xl-max);
 @include hidden(2xl, $screen-2xl-min, $screen-2xl-max);
 @include hidden(xl,  $screen-xl-min,  $screen-xl-max);
@@ -130,6 +132,7 @@
 .float-none  { float: none !important; }
 
 // Float responsive
+@include float(max, $screen-max-min);
 @include float(3xl, $screen-3xl-min, $screen-3xl-max);
 @include float(2xl, $screen-2xl-min, $screen-2xl-max);
 @include float(xl,  $screen-xl-min, $screen-xl-max);

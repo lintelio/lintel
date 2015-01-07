@@ -39,7 +39,9 @@ module.exports = function (grunt) {
             'sass/lintel/*.scss',
             '!sass/lintel/vars.scss',
             '!sass/lintel/functions.scss',
-            '!sass/lintel/mixins.scss'
+            '!sass/lintel/mixins.scss',
+            '!sass/lintel/normalize.scss',
+            '!sass/lintel/base.scss'
           ]
         }
       }
