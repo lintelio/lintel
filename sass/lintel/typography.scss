@@ -76,6 +76,20 @@ h1, h2, h3, h4, h5, h6,
 .text-base       { color: $text-base; font-size: $font-size-base; font-size: 1rem;}
 
 
+// Links
+// -----
+a {
+  color: $text-link;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $text-link-hover;
+    text-decoration: underline;
+  }
+}
+
+
 // Paragraphs
 // ----------
 p {

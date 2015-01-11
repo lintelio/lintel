@@ -8,11 +8,11 @@ $state-success:         #7a942e !default;
 $state-info:            #59abe3 !default;
 
 $state-primary-bg:      desaturate(lighten($state-primary, 45%), 5%) !default;
-$state-primary-text:    darken($state-primary, 10%) !default;
+$state-primary-text:    darken($state-primary, 7.5%) !default;
 $state-primary-border:  desaturate(lighten($state-primary, 22.5%), 5%) !default;
 
 $state-secondary-bg:    desaturate(lighten($state-secondary, 60%), 20%) !default;
-$state-secondary-text:  darken($state-secondary, 10%) !default;
+$state-secondary-text:  darken($state-secondary, 7.5%) !default;
 $state-secondary-border:desaturate(lighten($state-secondary, 30%), 40%) !default;
 
 $state-error-bg:        desaturate(lighten($state-error, 50%), 10%) !default;
@@ -62,8 +62,8 @@ $bg-light:              #fbfbfb !default;
 $bg-highlight:          #fbf7da !default;
 
 // Text
-$text-link:             $state-primary-text !default;
-$text-link-hover:       $state-primary-text !default;
+$text-link:             $state-primary !default;
+$text-link-hover:       darken($text-link, 5%) !default;
 
 $text-darkest:          $gray-darkest !default;
 $text-darker:           $gray-darker !default;
