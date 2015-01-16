@@ -4,6 +4,14 @@
   @return desaturate(lighten($color, $ligthen), $desaturate);
 }
 
+@function tint($color, $percentage) {
+  @return mix($color, white, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix($color, black, $percentage);
+}
+
 
 // Units
 // -----
