@@ -110,7 +110,7 @@ $font-family-headings:      $font-family-sans-serif !default;
 
 // Line Height
 $line-height-computed:      20px !default;
-$line-height-base:          strip-unit($line-height-computed / $font-size-base) !default;
+$line-height-base:          stripUnit($line-height-computed / $font-size-base) !default;
 $line-height-headings:      1.4 !default;
 
 // Font Weights

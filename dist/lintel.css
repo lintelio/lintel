@@ -355,7 +355,7 @@ select[multiple], select[size] {
   font-size: 1em;
   font-weight: normal;
   height: 34px;
-  line-height: strip-unit(1.42857);
+  line-height: 1.4285714286;
   padding: 5px 12px;
   width: 100%; }
   .form-control:focus {
@@ -682,7 +682,7 @@ html {
 body {
   color: #333333;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
-  line-height: strip-unit(1.42857); }
+  line-height: 1.4285714286; }
 
 .text-primary {
   color: #3c65a7; }
@@ -877,7 +877,7 @@ pre {
   color: #333333;
   display: block;
   font-size: 13px;
-  line-height: strip-unit(1.42857);
+  line-height: 1.4285714286;
   margin: 0 0 10px;
   padding: 10px 12px;
   word-break: break-all;
