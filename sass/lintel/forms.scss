@@ -72,6 +72,65 @@ $form-checkbox-margin-y:        5px !default;
 $form-checkbox-adjust-y:        3px !default;
 $form-checkbox-width:           20px !default;
 
+
+// Mixins
+// ------
+@mixin form-inline-styles() {
+  .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: $form-label-margin-x;
+  }
+
+  .form-label {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  .form-control {
+    margin-left: $form-label-margin-x;
+  }
+
+  .visible-sr + .form-control,
+  .form-control-group > .form-control {
+    margin-left: 0;
+  }
+
+  .form-control,
+  .form-control-placeholder {
+    display: inline-block;
+    margin-top: 0;
+    width: auto;
+  }
+
+  .form-help {
+    display: inline-block;
+    margin-left: $form-label-margin-x;
+  }
+
+  .form-error {
+    margin-left: $form-label-margin-x;
+
+    &:before {
+      @include triangle(($form-error-triangle-width, $form-error-triangle-height), $form-error-text, left);
+      bottom: auto;
+      content: '';
+      display: block;
+      margin-top: -($form-error-triangle-width / 2);
+      right: 100%;
+      position: absolute;
+      top: 50%;
+      z-index: $form-error-z-index;
+    }
+  }
+
+  %radbox-label {
+    display: inline-block;
+    margin: 0 0 0 $form-label-margin-x;
+  }
+}
+
+
 // Base Styles
 // -----------
 input[type="search"] {
@@ -295,62 +354,11 @@ textarea.form-control {
 // Inline forms
 // ------------
 %form-inline-styles {
-  .form-group {
-    display: inline-block;
-    margin-bottom: 0;
-    margin-right: $form-label-margin-x;
-  }
-
-  .form-label {
-    display: inline-block;
-    margin-bottom: 0;
-  }
-
-  .form-control {
-    margin-left: $form-label-margin-x;
-  }
-
-  .visible-sr + .form-control,
-  .form-control-group > .form-control {
-    margin-left: 0;
-  }
-
-  .form-control,
-  .form-control-placeholder {
-    display: inline-block;
-    margin-top: 0;
-    width: auto;
-  }
-
-  .form-help {
-    display: inline-block;
-    margin-left: $form-label-margin-x;
-  }
-
-  .form-error {
-    margin-left: $form-label-margin-x;
-
-    &:before {
-      @include triangle(($form-error-triangle-width, $form-error-triangle-height), $form-error-text, left);
-      bottom: auto;
-      content: '';
-      display: block;
-      margin-top: -($form-error-triangle-width / 2);
-      right: 100%;
-      position: absolute;
-      top: 50%;
-      z-index: $form-error-z-index;
-    }
-  }
-
-  %radbox-label {
-    display: inline-block;
-    margin: 0 0 0 $form-label-margin-x;
-  }
+  @include form-inline-styles();
 }
 
 @media screen and (min-width: $screen-md-min) {
-  .form-inline { @extend %form-inline-styles; }
+  .form-inline { @include form-inline-styles(); }
 }
 
 
